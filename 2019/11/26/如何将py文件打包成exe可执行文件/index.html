@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2019/11 | Hexo</title>
+  <title>如何将py文件打包成exe可执行文件 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -167,108 +167,122 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/11/26/Kali(xfce) linux 安装中文输入法的方法/">Kali(xfce) linux 安装中文输入法的方法</a></h4>
-                            
-                            <p><time datetime="2019-11-26T10:09:11.000Z"><a href="/2019/11/26/Kali(xfce) linux 安装中文输入法的方法/">2019-11-26</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/11/26/如何将py文件打包成exe可执行文件/">如何将py文件打包成exe可执行文件</a></h4>
-                            
-                            <p><time datetime="2019-11-26T10:09:05.000Z"><a href="/2019/11/26/如何将py文件打包成exe可执行文件/">2019-11-26</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/11/26/在github上搭建个人博客/">在github上搭建个人博客</a></h4>
-                            
-                            <p><time datetime="2019-11-26T10:08:57.000Z"><a href="/2019/11/26/在github上搭建个人博客/">2019-11-26</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/11/26/postName/">postName</a></h4>
-                            
-                            <p><time datetime="2019-11-26T10:01:34.000Z"><a href="/2019/11/26/postName/">2019-11-26</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/11/02/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2019-11-02T03:17:04.952Z"><a href="/2019/11/02/hello-world/">2019-11-02</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-11-26T10:09:05.000Z" itemprop="datePublished">
+          2019-11-26
+      </time>
+    
+</span>
+                <h1>如何将py文件打包成exe可执行文件</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="下载pyinstaller"><a href="#下载pyinstaller" class="headerlink" title="下载pyinstaller"></a>下载pyinstaller</h2><hr>
+<p><em>pyinstaler官网</em><br><a href="http://www.pyinstaller.org/downloads.html" target="_blank" rel="noopener">下载pyinstaler</a></p>
+<hr>
+<p><em>下载安装后，将压缩文件解压缩在Python安装目录下，进入该文件：</em></p>
+<hr>
+<p><em>该目录中含有setup.py，同时在cmd中进入该目录：</em></p>
+<hr>
+<p><em>输入命令</em></p>
+<blockquote>
+<p>python setup.py install</p>
+</blockquote>
+<hr>
+<p><em>看到“Finished processing dependencies for PyInstaller==3.3.dev0+41c426f6d”，即安装成功：</em></p>
+<hr>
+<h2 id="使用pyinstaller打包py文件成exe程序"><a href="#使用pyinstaller打包py文件成exe程序" class="headerlink" title="使用pyinstaller打包py文件成exe程序"></a><a href="#使用pyinstaller打包py文件成exe程序" title="使用pyinstaller打包py文件成exe程序"></a>使用pyinstaller打包py文件成exe程序</h2><p><em>将cmd的目录切换至（命令：cd 文件路径(注意空格)）需要打包的py文件目录下：</em></p>
+<blockquote>
+<p>pyinstaller -F spider.py<br>常用参数说明：<br>–icon=图标路径<br>-F 打包成一个exe文件<br>-w 使用窗口，无控制台<br>-c 使用控制台，无窗口<br>-D 创建一个目录，里面包含exe以及其他一些依赖性文件<br>pyinstaller -h 来查看参数</p>
+</blockquote>
+<hr>
+<h2 id="pyinstaller-改变生成exe程序的图标"><a href="#pyinstaller-改变生成exe程序的图标" class="headerlink" title="pyinstaller 改变生成exe程序的图标"></a><a href="#pyinstaller-改变生成exe程序的图标" title="pyinstaller 改变生成exe程序的图标"></a>pyinstaller 改变生成exe程序的图标</h2><blockquote>
+<p>pyinstaller -F –icon=my.ico spider.py</p>
+</blockquote>
+<p><em>my.ico 是一个图标名，和当前的spider.py文件在同一个目录下</em></p>
+<hr>
+<p><em>打包好的exe文件，在同目录的dist文件中：</em></p>
+<hr>
+<p><em>参考链接</em></p>
+<blockquote>
+<p><a href="https://blog.csdn.net/lqzdreamer/article/details/77917493" target="_blank" rel="noopener">https://blog.csdn.net/lqzdreamer/article/details/77917493</a></p>
+</blockquote>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/11/26/Kali(xfce)%20linux%20%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E6%96%B9%E6%B3%95/" style="float: left;">
+        ← Kali(xfce) linux 安装中文输入法的方法
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/11/26/%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+        在github上搭建个人博客 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

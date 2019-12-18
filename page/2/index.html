@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2019/11 | Hexo</title>
+  <title>Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -197,71 +197,202 @@
 <!-- // End height spacing helper -->
 
 <!-- ============================ END Hero Image =========================== -->
+<!-- ============================ Content =========================== -->
 
-
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
+        
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/11/26/Kali(xfce) linux 安装中文输入法的方法/">Kali(xfce) linux 安装中文输入法的方法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-11-26T10:09:11.000Z" itemprop="datePublished">
+          2019-11-26
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        ** 本来挺简单的一件事，拖了这么久，实在惭愧。。。**** 首先我的是Kali-linux(基于xfce主题)**
+
+在终端输入下面的命令
+$ leafpad /etc/apt/sources.list   #用编辑器打开sources.list
+
+
+将sources.list文件清空，然后加入下面信息，即保存一个阿里云的下载源
+deb http://mirrors.aliyun.com/kali kali-rolling main 
+                      
+                    </p>
                     
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/11/26/Kali(xfce) linux 安装中文输入法的方法/">Kali(xfce) linux 安装中文输入法的方法</a></h4>
-                            
-                            <p><time datetime="2019-11-26T10:09:11.000Z"><a href="/2019/11/26/Kali(xfce) linux 安装中文输入法的方法/">2019-11-26</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/11/26/如何将py文件打包成exe可执行文件/">如何将py文件打包成exe可执行文件</a></h4>
-                            
-                            <p><time datetime="2019-11-26T10:09:05.000Z"><a href="/2019/11/26/如何将py文件打包成exe可执行文件/">2019-11-26</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/11/26/在github上搭建个人博客/">在github上搭建个人博客</a></h4>
-                            
-                            <p><time datetime="2019-11-26T10:08:57.000Z"><a href="/2019/11/26/在github上搭建个人博客/">2019-11-26</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/11/26/postName/">postName</a></h4>
-                            
-                            <p><time datetime="2019-11-26T10:01:34.000Z"><a href="/2019/11/26/postName/">2019-11-26</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/11/02/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2019-11-02T03:17:04.952Z"><a href="/2019/11/02/hello-world/">2019-11-02</a></time></p>
-                        </div>
+                    <p class="pull-right readMore">
+                        <a href="/2019/11/26/Kali(xfce) linux 安装中文输入法的方法/">Read More...</a>
+                    </p>
                     
                 </div>
-            </div>    
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
         </div>
-    </div>
-</section> 
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/11/26/如何将py文件打包成exe可执行文件/">如何将py文件打包成exe可执行文件</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-11-26T10:09:05.000Z" itemprop="datePublished">
+          2019-11-26
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        下载pyinstaller
+pyinstaler官网下载pyinstaler
 
+下载安装后，将压缩文件解压缩在Python安装目录下，进入该文件：
+
+该目录中含有setup.py，同时在cmd中进入该目录：
+
+输入命令
+
+python setup.py install
+
+
+看到“Finished processing dependencies for PyInstaller==3.3.dev0+41c426f6d”，即安装成功：
+
+使用
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/11/26/如何将py文件打包成exe可执行文件/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/11/26/在github上搭建个人博客/">在github上搭建个人博客</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-11-26T10:08:57.000Z" itemprop="datePublished">
+          2019-11-26
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        闲着没事,就自己捣鼓一下,探究如何在github上搭建自己个人的博客建立自己个人博客网站的好处:1.把平时积累的知识记录下来,以便日后查看复习2.更好的熟练git(捂脸)3.向个位大佬齐(敬礼) 
+
+准备工作在github上创建仓库创建仓库
+
+安装git下载git
+
+使用SSH将git与Github进行绑定window进行配置linux进行配置
+
+安装node.js下载node.js
+
+安装hexo
+
+$npm install -g h
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/11/26/在github上搭建个人博客/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/11/26/postName/">postName</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-11-26T10:01:34.000Z" itemprop="datePublished">
+          2019-11-26
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        ** 如何搭建博客
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/11/26/postName/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/11/02/hello-world/">Hello World</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-11-02T03:17:04.952Z" itemprop="datePublished">
+          2019-11-02
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new p
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/11/02/hello-world/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <nav class="pagination" role="pagination">
+          <a class="pull-left" href="/">← Newer Posts</a>
+          
+        </nav>
+    </div>
+</section>
 <section id="statement">
     <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
         <div class="row">
@@ -269,6 +400,8 @@
         </div>
     </div>
 </section>
+<!-- ============================ END Content =========================== -->
+
       
 <!-- ============================ Footer =========================== -->
 
