@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>2020-02-06 | Hexo</title>
+  <title>444 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -173,28 +173,50 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2020-02-06T03:58:06.000Z" itemprop="datePublished">
-          2020-02-06
+      <time datetime="2020-02-13T11:17:08.000Z" itemprop="datePublished">
+          2020-02-13
       </time>
     
 </span>
-                <h1>2020-02-06</h1>
+                <h1>444</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		
+      		<center><h2>简单实用，使用You-Get下载Youtube上的音乐视频</h2></center>
+
+<h3 id="安装Python环境"><a href="#安装Python环境" class="headerlink" title="安装Python环境"></a>安装Python环境</h3><p><a href="https://www.python.org/" target="_blank" rel="noopener">python官网</a></p>
+<h3 id="安装you-get"><a href="#安装you-get" class="headerlink" title="安装you-get"></a>安装you-get</h3><figure class="highlight plain"><figcaption><span>install you-get</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install you-get</span><br></pre></td></tr></table></figure>
+
+<p><img src="/.com//1580879828617.png" alt="1580879828617"></p>
+<ul>
+<li>两个必要的参数： -s 或 -x ：使用代理必要的参数，后面加上代理的地址和接口，http代理是用-x，socks代理-s。例如shadowsocks是：-s 127.0.0.1:1080 </li>
+</ul>
+<h3 id="查看所要下载视频的画质"><a href="#查看所要下载视频的画质" class="headerlink" title="查看所要下载视频的画质"></a>查看所要下载视频的画质</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">you-get -i -s 127.0.0.1:1081 https://www.youtube.com/watch?v=3MvThU7IP_A</span><br></pre></td></tr></table></figure>
+
+<p><img src="/.com//1580880089237.png" alt="1580880089237"></p>
+<h3 id="开始下载"><a href="#开始下载" class="headerlink" title="开始下载"></a>开始下载</h3><ul>
+<li>找到需要下载画质对应的itag</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">you-get --itag=160 -s 127.0.0.1:1081 https://www.youtube.com/watch?v=3MvThU7IP_A</span><br></pre></td></tr></table></figure>
+
+<p><img src="/.com//1580880281571.png" alt="1580880281571"></p>
+<ul>
+<li>下载后会放在c盘的用户文件夹里，如需更改地址请用-o参数</li>
+</ul>
+<p><img src="/.com//1580880466027.png" alt="1580880466027"></p>
+<h3 id="完成下载"><a href="#完成下载" class="headerlink" title="完成下载"></a>完成下载</h3><ul>
+<li>Youtube下载的视频音画两个文件是分开的，用小丸工具箱合并即可</li>
+</ul>
+<p>参考链接<a href="https://www.bilibili.com/read/cv1269125" target="_blank" rel="noopener">B站</a></p>
+
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2020/02/13/444/" style="float: left;">
-        ← 444
-    </a>
     
-    
-    <a class="pull-right" href="/2020/02/04/2020-02-04/">
-        2020-02-04 →
+    <a class="pull-right" href="/2020/02/06/2020-02-06/">
+        2020-02-06 →
     </a>
     
 </nav>
