@@ -7,14 +7,14 @@
   
   <title>如何将py文件打包成exe可执行文件 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下载pyinstaller pyinstaler官网下载pyinstaler  下载安装后，将压缩文件解压缩在Python安装目录下，进入该文件：  该目录中含有setup.py，同时在cmd中进入该目录：  输入命令  python setup.py install   看到“Finished processing dependencies for PyInstaller==3.3.dev0+4">
+  <meta name="description" content="安装pyinstaller 下载pyinstaler   下载安装后，将压缩文件解压缩在Python安装目录下，进入该文件：   该目录中含有setup.py，同时在cmd中进入该目录：   输入命令  1$ python setup.py install    看到“Finished processing dependencies for PyInstaller==3.3.dev0+41c426">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何将py文件打包成exe可执行文件">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;26&#x2F;%E5%A6%82%E4%BD%95%E5%B0%86py%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E6%88%90exe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="下载pyinstaller pyinstaler官网下载pyinstaler  下载安装后，将压缩文件解压缩在Python安装目录下，进入该文件：  该目录中含有setup.py，同时在cmd中进入该目录：  输入命令  python setup.py install   看到“Finished processing dependencies for PyInstaller==3.3.dev0+4">
+<meta property="og:description" content="安装pyinstaller 下载pyinstaler   下载安装后，将压缩文件解压缩在Python安装目录下，进入该文件：   该目录中含有setup.py，同时在cmd中进入该目录：   输入命令  1$ python setup.py install    看到“Finished processing dependencies for PyInstaller==3.3.dev0+41c426">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-18T12:03:41.906Z">
+<meta property="og:updated_time" content="2020-02-18T11:35:36.988Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="../../../../atom.xml" title="Hexo" type="application/atom+xml">
@@ -84,41 +84,46 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="下载pyinstaller"><a href="#下载pyinstaller" class="headerlink" title="下载pyinstaller"></a>下载pyinstaller</h2><hr>
-<p><em>pyinstaler官网</em><br><a href="http://www.pyinstaller.org/downloads.html" target="_blank" rel="noopener">下载pyinstaler</a></p>
-<hr>
-<p><em>下载安装后，将压缩文件解压缩在Python安装目录下，进入该文件：</em></p>
-<hr>
-<p><em>该目录中含有setup.py，同时在cmd中进入该目录：</em></p>
-<hr>
-<p><em>输入命令</em></p>
-<blockquote>
-<p>python setup.py install</p>
-</blockquote>
-<hr>
-<p><em>看到“Finished processing dependencies for PyInstaller==3.3.dev0+41c426f6d”，即安装成功：</em></p>
-<hr>
-<h2 id="使用pyinstaller打包py文件成exe程序"><a href="#使用pyinstaller打包py文件成exe程序" class="headerlink" title="使用pyinstaller打包py文件成exe程序"></a><a href="#使用pyinstaller打包py文件成exe程序" title="使用pyinstaller打包py文件成exe程序"></a>使用pyinstaller打包py文件成exe程序</h2><p><em>将cmd的目录切换至（命令：cd 文件路径(注意空格)）需要打包的py文件目录下：</em></p>
-<blockquote>
-<p>pyinstaller -F spider.py<br>常用参数说明：<br>–icon=图标路径<br>-F 打包成一个exe文件<br>-w 使用窗口，无控制台<br>-c 使用控制台，无窗口<br>-D 创建一个目录，里面包含exe以及其他一些依赖性文件<br>pyinstaller -h 来查看参数</p>
-</blockquote>
-<hr>
-<h2 id="pyinstaller-改变生成exe程序的图标"><a href="#pyinstaller-改变生成exe程序的图标" class="headerlink" title="pyinstaller 改变生成exe程序的图标"></a><a href="#pyinstaller-改变生成exe程序的图标" title="pyinstaller 改变生成exe程序的图标"></a>pyinstaller 改变生成exe程序的图标</h2><blockquote>
-<p>pyinstaller -F –icon=my.ico spider.py</p>
-</blockquote>
-<p><em>my.ico 是一个图标名，和当前的spider.py文件在同一个目录下</em></p>
-<hr>
-<p><em>打包好的exe文件，在同目录的dist文件中：</em></p>
-<hr>
-<p><em>参考链接</em></p>
-<blockquote>
-<p><a href="https://blog.csdn.net/lqzdreamer/article/details/77917493" target="_blank" rel="noopener">https://blog.csdn.net/lqzdreamer/article/details/77917493</a></p>
-</blockquote>
+        <h2 id="安装pyinstaller"><a href="#安装pyinstaller" class="headerlink" title="安装pyinstaller"></a>安装pyinstaller</h2><ul>
+<li>下载<a href="http://www.pyinstaller.org/downloads.html" target="_blank" rel="noopener">pyinstaler</a></li>
+</ul>
+<ul>
+<li>下载安装后，将压缩文件解压缩在Python安装目录下，进入该文件：</li>
+</ul>
+<ul>
+<li>该目录中含有setup.py，同时在cmd中进入该目录：</li>
+</ul>
+<ul>
+<li>输入命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python setup.py install</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>看到“Finished processing dependencies for PyInstaller==3.3.dev0+41c426f6d”，即安装成功：</li>
+</ul>
+<h2 id="使用pyinstaller打包py文件成exe程序"><a href="#使用pyinstaller打包py文件成exe程序" class="headerlink" title="使用pyinstaller打包py文件成exe程序"></a>使用pyinstaller打包py文件成exe程序</h2><ul>
+<li>将cmd的目录切换至（命令：cd 文件路径(注意空格)）需要打包的py文件目录下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ pyinstaller -F spider.py</span><br><span class="line">#常用参数说明：</span><br><span class="line">#	–icon=图标路径</span><br><span class="line">#	-F 打包成一个exe文件</span><br><span class="line">#	-w 使用窗口，无控制台</span><br><span class="line">#	-c 使用控制台，无窗口</span><br><span class="line">#	-D 创建一个目录，里面包含exe以及其他一些依赖性文件</span><br><span class="line">$ pyinstaller -h 	#查看参数</span><br></pre></td></tr></table></figure>
+
+<h2 id="pyinstaller-改变生成exe程序的图标"><a href="#pyinstaller-改变生成exe程序的图标" class="headerlink" title="pyinstaller 改变生成exe程序的图标"></a>pyinstaller 改变生成exe程序的图标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ pyinstaller -F –icon=my.ico spider.py</span><br><span class="line"></span><br><span class="line"># my.ico 是一个图标名，和当前的spider.py文件在同一个目录下</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>打包好的exe文件，在同目录的dist文件中：</li>
+</ul>
+<ul>
+<li><p>参考链接 </p>
+<p>  <a href="https://blog.csdn.net/lqzdreamer/article/details/77917493" target="_blank" rel="noopener">CSDN</a></p>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/26/%E5%A6%82%E4%BD%95%E5%B0%86py%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E6%88%90exe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/" data-id="ck6rrwmv1000f48sv4xfu7dlh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/26/%E5%A6%82%E4%BD%95%E5%B0%86py%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E6%88%90exe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/" data-id="ck6rtuwrf000fjosv9lqdfx3e" class="article-share-link">Share</a>
       
       
     </footer>

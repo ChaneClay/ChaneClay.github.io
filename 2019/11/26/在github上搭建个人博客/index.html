@@ -7,14 +7,14 @@
   
   <title>在github上搭建个人博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="闲着没事,就自己捣鼓一下,探究如何在github上搭建自己个人的博客建立自己个人博客网站的好处:1.把平时积累的知识记录下来,以便日后查看复习2.更好的熟练git(捂脸)3.向个位大佬齐(敬礼)   准备工作在github上创建仓库创建仓库  安装git下载git  使用SSH将git与Github进行绑定window进行配置linux进行配置  安装node.js下载node.js  安装hex">
+  <meta name="description" content="闲着没事,就自己捣鼓一下,探究如何在github上搭建自己个人的博客建立自己个人博客网站的好处:1.把平时积累的知识记录下来,以便日后查看复习2.更好的熟练git(捂脸)3.向个位大佬齐(敬礼)   准备工作 在github上创建仓库创建仓库    安装git下载git    使用SSH将git与Github进行绑定window进行配置linux进行配置    安装node.js下载node.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在github上搭建个人博客">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;26&#x2F;%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="闲着没事,就自己捣鼓一下,探究如何在github上搭建自己个人的博客建立自己个人博客网站的好处:1.把平时积累的知识记录下来,以便日后查看复习2.更好的熟练git(捂脸)3.向个位大佬齐(敬礼)   准备工作在github上创建仓库创建仓库  安装git下载git  使用SSH将git与Github进行绑定window进行配置linux进行配置  安装node.js下载node.js  安装hex">
+<meta property="og:description" content="闲着没事,就自己捣鼓一下,探究如何在github上搭建自己个人的博客建立自己个人博客网站的好处:1.把平时积累的知识记录下来,以便日后查看复习2.更好的熟练git(捂脸)3.向个位大佬齐(敬礼)   准备工作 在github上创建仓库创建仓库    安装git下载git    使用SSH将git与Github进行绑定window进行配置linux进行配置    安装node.js下载node.js">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-18T12:03:19.882Z">
+<meta property="og:updated_time" content="2020-02-18T11:27:01.143Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="../../../../atom.xml" title="Hexo" type="application/atom+xml">
@@ -86,51 +86,69 @@
       
         <p><strong>闲着没事,就自己捣鼓一下,探究如何在github上搭建自己个人的博客</strong><br><strong>建立自己个人博客网站的好处:</strong><br><strong>1.把平时积累的知识记录下来,以便日后查看复习</strong><br><strong>2.更好的熟练git(捂脸)</strong><br><strong>3.向个位大佬齐(敬礼)</strong> </p>
 <hr>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p><em>在github上创建仓库</em><br><a href="https://github.com/new" target="_blank" rel="noopener">创建仓库</a></p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>在github上创建仓库<br><a href="https://github.com/new" target="_blank" rel="noopener">创建仓库</a></li>
+</ul>
 <hr>
-<p><em>安装git</em><br><a href="https://git-scm.com/download/" target="_blank" rel="noopener">下载git</a></p>
+<ul>
+<li>安装git<br><a href="https://git-scm.com/download/" target="_blank" rel="noopener">下载git</a></li>
+</ul>
 <hr>
-<p><em>使用SSH将git与Github进行绑定</em><br><a href="https://blog.csdn.net/zero________________/article/details/81143284" target="_blank" rel="noopener">window进行配置</a><br><a href="https://blog.csdn.net/dong_W_/article/details/78787162" target="_blank" rel="noopener">linux进行配置</a></p>
+<ul>
+<li>使用SSH将git与Github进行绑定<br><a href="https://blog.csdn.net/zero________________/article/details/81143284" target="_blank" rel="noopener">window进行配置</a><br><a href="https://blog.csdn.net/dong_W_/article/details/78787162" target="_blank" rel="noopener">linux进行配置</a></li>
+</ul>
 <hr>
-<p><em>安装node.js</em><br><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载node.js</a></p>
+<ul>
+<li>安装node.js<br><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载node.js</a></li>
+</ul>
 <hr>
-<p><em>安装hexo</em></p>
-<blockquote>
-<p>$npm install -g hexo-cli</p>
-</blockquote>
+<ul>
+<li>安装hexo</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="生成项目"><a href="#生成项目" class="headerlink" title="生成项目"></a><a href="#生成项目" title="生成项目"></a>生成项目</h2><blockquote>
-<p>&nbsp;$hexo init &lt;folder&gt;  &nbsp;&nbsp;&nbsp;&nbsp;#folder为你存储项目的文件夹<br>&nbsp;$ cd &lt;folder&gt;<br>&nbsp;$ npm install<br>&nbsp;$ hexo generate  #或hexo g<br>&nbsp;$ hexo server    #或hexo s  启动本地服务器,然后可以通过<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 访问</p>
-</blockquote>
-<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a><a href="#部署到github" title="部署到github"></a>部署到github</h2><p><em>在项目里找到_config.yml文件</em></p>
-<blockquote>
-<p>deploy:<br>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: git  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#注意”:”后有空格<br>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:ChenZon/ChenZon.github.io.git  &nbsp;&nbsp;&nbsp;#域名填写你本人的<br>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;branch: master</p>
-</blockquote>
-<p><em>回到命令行，输入以下命令</em></p>
-<blockquote>
-<p>&nbsp;$npm install hexo-deployer-git –save<br>&nbsp;$hexo generate #或hexo g<br>&nbsp;$hexo deploy   #或hexo d</p>
-</blockquote>
-<p><em>然后可以正常通过域名访问刚刚所部署的项目</em></p>
-<p><strong><a href="https://chenzon.github.io" target="_blank" rel="noopener">https://chenzon.github.io</a></strong> #访问本人的github地址</p>
-<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a><a href="#更换主题" title="更换主题"></a>更换主题</h2><p><em>如果你觉得主题不好看，可以根据自己的爱好进行更换</em><br><strong><a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></strong></p>
-<hr>
-<p><em>当你看上了喜欢的主题，将其下载到本地</em></p>
-<blockquote>
-<p>$git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:blinkfox/hexo-theme-matery.git #注意：要下载到项目中的themes文件里</p>
-</blockquote>
-<p><em>在项目里找到_config.yml文件，作以下修改</em></p>
-<blockquote>
-<p>theme: hexo-theme-matery &nbsp;&nbsp;&nbsp;#hexo-theme-matery为你所下载的主题名字</p>
-</blockquote>
-<p><em>然后重新部署</em></p>
-<blockquote>
-<p>&nbsp;hexo clean &nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;hexo generate &nbsp;&nbsp;&nbsp;&nbsp;#或hexo g<br>&nbsp;hexo deploy &nbsp;&nbsp;&nbsp;&nbsp;#或hexo d</p>
-</blockquote>
+<h2 id="生成项目"><a href="#生成项目" class="headerlink" title="生成项目"></a>生成项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &amp;lt;folder&gt;  #folder为你存储项目的文件夹</span><br><span class="line">$ cd folder</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo generate  #或hexo g</span><br><span class="line">$ hexo server    #或hexo s  启动本地服务器,然后可以通过[http://localhost:4000](http://localhost:4000) 访问</span><br></pre></td></tr></table></figure>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><ul>
+<li>在项目里找到_config.yml文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git  #注意&quot;:&quot;后有空格</span><br><span class="line">repo: repo: git@github.com:ChaneClay/ChaneClay.github.io.git    #域名填写你本人的</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>回到命令行，输入以下命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git –save</span><br><span class="line">$ hexo generate #或hexo g</span><br><span class="line">$ hexo deploy   #或hexo d</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>然后可以正常通过域名访问刚刚所部署的项目</p>
+<p>  <strong>访问<a href="https://chaneclay.github.io/" target="_blank" rel="noopener">本人的博客</a></strong></p>
+</li>
+</ul>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><ul>
+<li><p>如果你觉得主题不好看，可以根据自己的爱好进行更换</p>
+<p>  <strong>浏览<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题</a></strong></p>
+</li>
+</ul>
+<ul>
+<li>当你看上了喜欢的主题，将其下载到本地</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/Shen-Yu/hexo-theme-ayer.git #注意：要下载到项目中的themes文件里</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在项目里找到_config.yml文件，作以下修改</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: hexo-theme-ayer 	#hexo-theme-ayer为你所下载的主题名字</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>然后重新部署</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean </span><br><span class="line">$ hexo generate #或hexo g</span><br><span class="line">$ hexo deploy 	#或hexo d</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/26/%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck6rrwmvf000g48sven2ob57g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/26/%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck6rtuwrd000ejosvcsnufg9o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -148,11 +166,6 @@
       </div>
     </a>
   
-  
-    <a href="../../02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
   
 </nav>
 
