@@ -7,17 +7,17 @@
   
   <title>XPath学习笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="xpath学习笔记 ### XPath语法  123456789101112131415&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&amp;gt;&amp;lt;bookstore&amp;gt;&amp;lt;book&amp;gt;  &amp;lt;title lang=&quot;eng&quot;&amp;gt;Harry Potter&amp;lt;&#x2F;title&amp;gt;  &amp;lt;price&amp;gt;29.99&amp;lt;&#x2F;p">
+  <meta name="description" content="xpath学习笔记   123456789101112131415&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&amp;gt;&amp;lt;bookstore&amp;gt;&amp;lt;book&amp;gt;  &amp;lt;title lang=&quot;eng&quot;&amp;gt;Harry Potter&amp;lt;&#x2F;title&amp;gt;  &amp;lt;price&amp;gt;29.99&amp;lt;&#x2F;price&amp;gt;&amp;lt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XPath学习笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="xpath学习笔记 ### XPath语法  123456789101112131415&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&amp;gt;&amp;lt;bookstore&amp;gt;&amp;lt;book&amp;gt;  &amp;lt;title lang=&quot;eng&quot;&amp;gt;Harry Potter&amp;lt;&#x2F;title&amp;gt;  &amp;lt;price&amp;gt;29.99&amp;lt;&#x2F;p">
+<meta property="og:description" content="xpath学习笔记   123456789101112131415&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&amp;gt;&amp;lt;bookstore&amp;gt;&amp;lt;book&amp;gt;  &amp;lt;title lang=&quot;eng&quot;&amp;gt;Harry Potter&amp;lt;&#x2F;title&amp;gt;  &amp;lt;price&amp;gt;29.99&amp;lt;&#x2F;price&amp;gt;&amp;lt">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1589458607127.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1589458689294.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1589458745991.png">
-<meta property="og:updated_time" content="2020-07-18T14:39:27.542Z">
+<meta property="og:updated_time" content="2020-07-18T14:43:04.109Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1589458607127.png">
   
@@ -89,7 +89,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <center><h2>xpath学习笔记</h2></center>
-### XPath语法
+
 
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bookstore</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">"eng"</span>&gt;</span>Harry Potter<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">price</span>&gt;</span>29.99<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">"eng"</span>&gt;</span>Learning XML<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">price</span>&gt;</span>39.95<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">bookstore</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -149,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/06/XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ckcrreo2o000b8wsv2r26g0jw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/06/XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ckcrsbl8g0008yksv63j24thn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,11 +158,11 @@
     
 <nav id="article-nav">
   
-    <a href="../../08/11/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="../../08/numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          11
+          numpy学习笔记
         
       </div>
     </a>

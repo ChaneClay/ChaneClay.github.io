@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>numpy学习笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="numpy学习笔记  nnumpy属性1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859import numpy as nparray = np.array([1, 2, 4], dtype=np.int64)	# 创建矩阵arra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="numpy学习笔记">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="numpy学习笔记  nnumpy属性1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859import numpy as nparray = np.array([1, 2, 4], dtype=np.int64)	# 创建矩阵arra">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1593576136145.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1593576191725.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1590737952639.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1590738008160.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1590738310534.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1590738900623.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1590739792217.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1593578272636.png">
+<meta property="og:updated_time" content="2020-07-18T15:08:24.892Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1593576136145.png">
+  
+    <link rel="alternate" href="../../../../atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="../../../../css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../../../index.html" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="../../../../index.html">Home</a>
+        
+          <a class="main-nav-link" href="../../../../archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../../../atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-numpy学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="" class="article-date">
+  <time datetime="2019-12-08T01:18:02.000Z" itemprop="datePublished">2019-12-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      numpy学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <center><h2>numpy学习笔记</h2></center>
+
+<h3 id="nnumpy属性"><a href="#nnumpy属性" class="headerlink" title="nnumpy属性"></a>nnumpy属性</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">array = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>], dtype=np.int64)	<span class="comment"># 创建矩阵</span></span><br><span class="line">array.ndim	<span class="comment"># 维度</span></span><br><span class="line">array.shape	<span class="comment"># 行列</span></span><br><span class="line">array.size  	<span class="comment"># 大小</span></span><br><span class="line">array.sum(axis=<span class="number">0</span>)		<span class="comment"># 列元素总和</span></span><br><span class="line">array.max(axis=<span class="number">1</span>)		<span class="comment"># 行最大值</span></span><br><span class="line">array.min()		<span class="comment"># 最小值</span></span><br><span class="line">array.argmax()	<span class="comment"># 最大值索引</span></span><br><span class="line">array.mean()	<span class="comment"># 平均值</span></span><br><span class="line">array.median()	<span class="comment"># 中位数</span></span><br><span class="line">array.cumsum()	<span class="comment"># 累加和</span></span><br><span class="line">np.diff(array)	<span class="comment"># 相邻数之差</span></span><br><span class="line">np.sort(array)	<span class="comment"># 逐行元素排序</span></span><br><span class="line">np.transpose(array)	<span class="comment"># 矩阵反转</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">array = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])		<span class="comment"># 两行三列</span></span><br><span class="line">np.ones_like(array)		<span class="comment"># 根据数组array的形状生成一个全1数组</span></span><br><span class="line">np.zeros_like(array)	<span class="comment"># 根据数组array的形状生成一个全0数组</span></span><br><span class="line">np.full_like(array, val)	<span class="comment"># 根据数组array的形状生成一个数组，每个元素都是val</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">array[<span class="number">1</span>]	<span class="comment"># 取某行元素</span></span><br><span class="line">array[<span class="number">0</span>, <span class="number">1</span>] <span class="comment"># 取某个元素	或array[0][1]</span></span><br><span class="line">array[:, <span class="number">1</span>]	<span class="comment"># 取某列元素</span></span><br><span class="line">array[<span class="number">1</span>, <span class="number">0</span>:<span class="number">2</span>]	<span class="comment"># 特定行某些元素</span></span><br><span class="line"></span><br><span class="line">array = np.zeros( (<span class="number">3</span>, <span class="number">4</span>) )	<span class="comment"># 零矩阵</span></span><br><span class="line">array = np.ones( (<span class="number">3</span>, <span class="number">4</span>) )	<span class="comment"># 一矩阵</span></span><br><span class="line"></span><br><span class="line">array = np.arange(<span class="number">10</span>, <span class="number">20</span>, <span class="number">2</span>)	<span class="comment"># 数列，起始为10，步长为2，终止为18</span></span><br><span class="line">array = np.arange(<span class="number">12</span>).reshape((<span class="number">3</span>, <span class="number">4</span>))	<span class="comment"># 0-11的三行四列矩阵</span></span><br><span class="line">array = np.linspace(<span class="number">1</span>, <span class="number">10</span>, <span class="number">5</span>)	<span class="comment"># 生成5段</span></span><br><span class="line"></span><br><span class="line">array.reshape(shape)	<span class="comment"># 不改变数组元素，返回一个shape形状的数据，原数组不变</span></span><br><span class="line">array.resize(shape)		<span class="comment"># 与reshape()功能一致，但修改原数组</span></span><br><span class="line">array.flatten()			<span class="comment"># 对数组进行降维，返回折叠后的一位数组，原数组不变</span></span><br><span class="line">array.tolist()			<span class="comment"># 将数据元素转变为列表</span></span><br><span class="line"></span><br><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">b = np.arange(<span class="number">5</span>)    </span><br><span class="line">a+b		<span class="comment"># 矩阵加法运算</span></span><br><span class="line">np.dot(a, b)	<span class="comment"># 矩阵的乘法</span></span><br><span class="line"></span><br><span class="line">tri = np.cos(pi)		<span class="comment"># 三角函数</span></span><br><span class="line"></span><br><span class="line">array = np.random.random((<span class="number">2</span>, <span class="number">4</span>))	<span class="comment"># 随机生成0-1的2行3列的矩阵</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> array:		<span class="comment"># 逐行遍历</span></span><br><span class="line">    print(row)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> array.T:		<span class="comment"># 逐列遍历</span></span><br><span class="line">    print(col)</span><br><span class="line">    </span><br><span class="line">A = np.array([<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>])	<span class="comment"># 合并矩阵</span></span><br><span class="line">B = np.array([<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>])</span><br><span class="line">C = np.vstack((A, B))	<span class="comment"># 上下合并</span></span><br><span class="line">D = np.hstack((A, B))	<span class="comment"># 左右合并</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x_norm=np.linalg.norm(x, ord=<span class="literal">None</span>, axis=<span class="literal">None</span>, keepdims=<span class="literal">False</span>)	<span class="comment">#求范数</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">data = np.arange(<span class="number">100</span>).reshape(<span class="number">5</span>, <span class="number">20</span>)</span><br><span class="line">np.savetxt(<span class="string">'data.txt'</span>, data, fmt=<span class="string">'%d'</span>, delimiter=<span class="string">' '</span>)		<span class="comment"># 写数据</span></span><br><span class="line">out = np.loadtxt(<span class="string">'data.txt'</span>, delimiter=<span class="string">' '</span>)	<span class="comment"># 读数据</span></span><br><span class="line"></span><br><span class="line">data = np.arange(<span class="number">100</span>).reshape(<span class="number">5</span>, <span class="number">10</span>, <span class="number">2</span>)					<span class="comment"># 多维数组</span></span><br><span class="line">data.tofile(<span class="string">'data.dat'</span>, sep=<span class="string">' '</span>, format=<span class="string">'%d'</span>)			<span class="comment"># 以二进制形式存储数据</span></span><br><span class="line">out = np.fromfile(<span class="string">'data.dat'</span>, dtype=np.int, sep=<span class="string">' '</span>).reshape(<span class="number">5</span>, <span class="number">10</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">data = np.arange(<span class="number">100</span>).reshape(<span class="number">5</span>, <span class="number">10</span>, <span class="number">2</span>)		<span class="comment"># 多维数组</span></span><br><span class="line">np.save(<span class="string">'data.npy'</span>, data)</span><br><span class="line">out = np.load(<span class="string">'data.npy'</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">out = np.random.rand(<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)	<span class="comment"># 0-1随机的浮点数</span></span><br><span class="line">out = np.random.randn(<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)	<span class="comment"># 每一个元素服从正态分布</span></span><br><span class="line">out = np.random.randint(<span class="number">100</span>, <span class="number">200</span>, (<span class="number">3</span>, <span class="number">4</span>))	<span class="comment"># 指定区间生成随机数</span></span><br><span class="line"></span><br><span class="line">np.random.shuffle(out)		<span class="comment"># 打乱原来的数组</span></span><br><span class="line">np.random.permutation(out)</span><br><span class="line">np.random.choice(out, (<span class="number">3</span>, <span class="number">2</span>), replace=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">np.random.uniform(low, hight, size)	<span class="comment"># 产生具有均匀分布的数组，low起始值，high结束值，size形状</span></span><br><span class="line">np.random.mormal(loc, scale, size) 	<span class="comment"># 产生具有正态分布的数组，loc均值，scale标准差，size形状</span></span><br><span class="line">np.poisson(lam, size)	<span class="comment"># 产生具有泊松分布的数组，lam随机事件发生率，size形状</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="梯度函数"><a href="#梯度函数" class="headerlink" title="梯度函数"></a>梯度函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.gradient(f)		<span class="comment"># 计算数组f中元素的梯度，当f为多维时，返回每个维度梯度</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">np.sum()</span><br><span class="line">np.mean()</span><br><span class="line">np.average()</span><br><span class="line">np.std()</span><br><span class="line">np.var()</span><br><span class="line">np.median()</span><br><span class="line">np.min()</span><br><span class="line">np.max()</span><br><span class="line">np.argmin()</span><br><span class="line">np.argmax()</span><br><span class="line">np.unravel_index()</span><br><span class="line">np.ptp()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="图像的数组表示"><a href="#图像的数组表示" class="headerlink" title="图像的数组表示"></a>图像的数组表示</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">im = np.array(Image.open(<span class="string">'timg2.jpg'</span>).convert(<span class="string">'L'</span>))	<span class="comment"># 图片变换</span></span><br><span class="line">trans = (<span class="number">50</span>/<span class="number">255</span>)*im + <span class="number">200</span></span><br><span class="line">im = Image.fromarray(trans.astype(<span class="string">'uint8'</span>))</span><br><span class="line">im.save(<span class="string">'timg.jpg'</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(x, y, format_string, **kwargs)</span><br><span class="line"><span class="comment"># format_string由颜色字符、风格字符和标记字符组成</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="subplot用法"><a href="#subplot用法" class="headerlink" title="subplot用法"></a>subplot用法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">t=np.arange(<span class="number">0.0</span>,<span class="number">2.0</span>,<span class="number">0.1</span>)</span><br><span class="line">s=np.sin(t*np.pi)</span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>) <span class="comment">#要生成两行两列，这是第一个图plt.subplot('行','列','编号')</span></span><br><span class="line">plt.plot(t,s,<span class="string">'b--'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'y1'</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>) <span class="comment">#两行两列,这是第二个图</span></span><br><span class="line">plt.plot(<span class="number">2</span>*t,s,<span class="string">'r--'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'y2'</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>)<span class="comment">#两行两列,这是第三个图</span></span><br><span class="line">plt.plot(<span class="number">3</span>*t,s,<span class="string">'m--'</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>)<span class="comment">#两行两列,这是第四个图</span></span><br><span class="line">plt.plot(<span class="number">4</span>*t,s,<span class="string">'k--'</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/12/08/numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1593576136145.png" alt="1593576136145"></p>
+<h4 id="subplots用法"><a href="#subplots用法" class="headerlink" title="subplots用法"></a>subplots用法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个数组0-100，数据间隔是0.1</span></span><br><span class="line">x = np.arange(<span class="number">0</span>, <span class="number">100</span>, <span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line">y = x ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用subplots函数</span></span><br><span class="line"><span class="comment"># 指定图像分辨率、大小和长宽比例</span></span><br><span class="line"><span class="comment"># 创建一个800*600像素、100dpi(每英寸100点)分辨率的图形</span></span><br><span class="line"><span class="comment"># 返回一个画布对象和一个轴数组</span></span><br><span class="line">fig, axe = plt.subplots(<span class="number">2</span>, <span class="number">2</span>, figsize=(<span class="number">8</span>, <span class="number">6</span>), dpi=<span class="number">100</span>)</span><br><span class="line"><span class="comment"># 在axe上绘制一条抛物线，红色 点</span></span><br><span class="line">axe[<span class="number">0</span>][<span class="number">1</span>].plot(x, y, <span class="string">"r:"</span>)</span><br><span class="line"><span class="comment"># 设置y轴标记为X</span></span><br><span class="line">axe[<span class="number">0</span>][<span class="number">1</span>].set_xlabel(<span class="string">"X"</span>)</span><br><span class="line"><span class="comment"># 设置x轴标记为Y</span></span><br><span class="line">axe[<span class="number">0</span>][<span class="number">1</span>].set_ylabel(<span class="string">"Y"</span>)</span><br><span class="line"><span class="comment"># 设置图标题</span></span><br><span class="line">axe[<span class="number">0</span>][<span class="number">1</span>].set_title(<span class="string">"y=x**2"</span>)</span><br><span class="line"><span class="comment"># 显示绘制的图片</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/12/08/numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1593576191725.png" alt="1593576191725"></p>
+<h4 id="单直线"><a href="#单直线" class="headerlink" title="单直线"></a>单直线</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">x = [<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>]</span><br><span class="line">y = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>]</span><br><span class="line">plt.subplot(<span class="number">3</span>, <span class="number">2</span>, <span class="number">2</span>)        <span class="comment"># 分块，横三块，竖两块，位于第二块</span></span><br><span class="line">plt.plot(x, y)  <span class="comment"># x轴、y轴</span></span><br><span class="line">plt.ylabel(<span class="string">'Grade'</span>)</span><br><span class="line">plt.axis([<span class="number">-1</span>, <span class="number">10</span>, <span class="number">0</span>, <span class="number">10</span>])   <span class="comment"># 坐标范围</span></span><br><span class="line">plt.savefig(<span class="string">'img'</span>, dpi=<span class="number">600</span>) <span class="comment"># 保存为图片</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2019/12/08/numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1590737952639.png" alt="1590737952639"></p>
+<h4 id="多条直线"><a href="#多条直线" class="headerlink" title="多条直线"></a>多条直线</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.arange(<span class="number">10</span>)</span><br><span class="line">plt.plot(a, a*<span class="number">1.5</span>, <span class="string">'go-'</span>, a, a*<span class="number">2.5</span>, <span class="string">'rx'</span>, a, a*<span class="number">3.5</span>, <span class="string">'*'</span>, a, a*<span class="number">4.5</span>, <span class="string">'b-.'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2019/12/08/numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1590738008160.png" alt="1590738008160"></p>
+<ul>
+<li>文字显示</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib		<span class="comment"># 全局设置</span></span><br><span class="line">matplotlib.rcParams[<span class="string">'font.family'</span>] = <span class="string">'SimHei'</span></span><br><span class="line"></span><br><span class="line">plt.ylabel(<span class="string">'中文'</span>, fontproperties=<span class="string">'SimHei'</span>)	<span class="comment"># 局部设置</span></span><br><span class="line"></span><br><span class="line">plt.text(<span class="number">2</span>, <span class="number">1</span>, <span class="string">'说明'</span>)	<span class="comment"># 指定坐标显示信息</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>划分子区域</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.subplot2grid((<span class="number">3</span>, <span class="number">3</span>), (<span class="number">1</span>, <span class="number">0</span>), colspan=<span class="number">3</span>)		<span class="comment"># 划分3x3块 指定位置 横跨大小</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.gridspec <span class="keyword">as</span> gridspec	</span><br><span class="line">gs = gridspec.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">1</span>, <span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="饼状图"><a href="#饼状图" class="headerlink" title="饼状图"></a>饼状图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">labels = <span class="string">'Frogs'</span>, <span class="string">'Hogs'</span>, <span class="string">'Dogs'</span>, <span class="string">'Logs'</span></span><br><span class="line">sizes = [<span class="number">15</span>, <span class="number">30</span>, <span class="number">45</span>, <span class="number">10</span>]</span><br><span class="line">explode = (<span class="number">0</span>, <span class="number">0.1</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">plt.pie(sizes, explode=explode, labels=labels, autopct=<span class="string">'%1.1f%%'</span>, shadow=<span class="literal">False</span>, startangle=<span class="number">90</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2019/12/08/numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1590738310534.png" alt="1590738310534"></p>
+<h4 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">0</span>)</span><br><span class="line">mu, sigma = <span class="number">100</span>, <span class="number">20</span>     <span class="comment"># 均值和标准差</span></span><br><span class="line">a = np.random.normal(mu, sigma, size=<span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">plt.hist(a, <span class="number">10</span>, histtype=<span class="string">'stepfilled'</span>, facecolor=<span class="string">'b'</span>, alpha=<span class="number">0.75</span>)</span><br><span class="line">plt.title(<span class="string">'Histogram'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2019/12/08/numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1590738900623.png" alt="1590738900623"></p>
+<h4 id="极坐标图"><a href="#极坐标图" class="headerlink" title="极坐标图"></a>极坐标图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">N = <span class="number">20</span></span><br><span class="line">theta = np.linspace(<span class="number">0.0</span>, <span class="number">2</span> * np.pi, N, endpoint=<span class="literal">False</span>)</span><br><span class="line">radii = <span class="number">10</span> * np.random.rand(N)</span><br><span class="line">width = np.pi / <span class="number">4</span> * np.random.rand(N)</span><br><span class="line"></span><br><span class="line">ax = plt.subplot(<span class="number">111</span>, projection=<span class="string">'polar'</span>)</span><br><span class="line">bars = ax.bar(theta, radii, width=width, bottom=<span class="number">0.0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> r, bar <span class="keyword">in</span> zip(radii, bars):</span><br><span class="line">    bar.set_facecolor(plt.cm.viridis(r / <span class="number">10.</span>))</span><br><span class="line">    bar.set_alpha(<span class="number">0.5</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2019/12/08/numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1590739792217.png" alt="1590739792217"></p>
+<h4 id="散点图"><a href="#散点图" class="headerlink" title="散点图"></a>散点图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">xValue = list(range(<span class="number">0</span>, <span class="number">101</span>))</span><br><span class="line">yValue = [x * np.random.rand() <span class="keyword">for</span> x <span class="keyword">in</span> xValue]</span><br><span class="line"></span><br><span class="line">plt.xlabel(<span class="string">'x-value'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'y-label'</span>)</span><br><span class="line"></span><br><span class="line">plt.scatter(xValue, yValue, s=<span class="number">20</span>, c=<span class="string">"#ff1212"</span>, marker=<span class="string">'o'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/12/08/numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1593578272636.png" alt="1593578272636"></p>
+<h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><h4 id="Series"><a href="#Series" class="headerlink" title="Series"></a>Series</h4><ul>
+<li>标量创建</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">p = pd.Series([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">2</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'d'</span>, <span class="string">'c'</span>])</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>字典创建</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">p = pd.Series(&#123;<span class="string">'a'</span>:<span class="number">9</span>, <span class="string">'b'</span>:<span class="number">8</span>, <span class="string">'c'</span>:<span class="number">7</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>ndarray创建</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">n = pd.Series(np.arrage(<span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h4><ul>
+<li>二维ndarray对象创建</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">d = pd.DataFrame(np.arrage(<span class="number">10</span>).reshape(<span class="number">2</span>, <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>nan数据</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.read_csv(<span class="string">'movies.csv'</span>, keep_default_na=<span class="literal">False</span>)	<span class="comment"># 不读取nan数据</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>一维ndarray对象字典创建</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">dt = &#123;<span class="string">'one'</span>: pd.Series([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]), </span><br><span class="line">     <span class="string">'two'</span>: pd.Series([<span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'c'</span>])&#125;</span><br><span class="line">d = pd.DataFrame(dt)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>列表类型的字典创建</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">dct = &#123;<span class="string">'one'</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="string">'tow'</span>: [<span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>]&#125;</span><br><span class="line">d = pd.DataFrame(dct, index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>])</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="重新排序索引"><a href="#重新排序索引" class="headerlink" title="重新排序索引"></a>重新排序索引</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d = d.reindex(index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>])	<span class="comment"># 行索引</span></span><br><span class="line">d = d.reindex(columns=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>])	<span class="comment"># 列索引</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = pd.DataFrame(np.arrage(<span class="number">20</span>).reshape(<span class="number">4</span>, <span class="number">5</span>), index=[<span class="string">'c'</span>, <span class="string">'a'</span>, <span class="string">'d'</span>, <span class="string">'b'</span>])</span><br><span class="line">a.sort_index(axis=<span class="number">0</span>, ascending=<span class="literal">True</span>)	<span class="comment"># 按照索引排序</span></span><br><span class="line"></span><br><span class="line">a.sort_values(<span class="number">2</span>, axis=<span class="number">0</span>, ascending=<span class="literal">True</span>)	<span class="comment"># 按照列索引为2的值排序</span></span><br><span class="line"></span><br><span class="line">a.describe()	<span class="comment"># 统计分析函数</span></span><br><span class="line">a.describe()[<span class="string">'max'</span>]		<span class="comment"># 最大值</span></span><br><span class="line">a.describe().ix[<span class="string">'max'</span>]	<span class="comment"># 每一行的最大值</span></span><br><span class="line">a.describe().[<span class="number">2</span>]	<span class="comment"># 第二行统计信息</span></span><br><span class="line"></span><br><span class="line">a.rolling(w).sum()	<span class="comment"># 依次计算相邻w个元素的和</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/08/numpy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ckcrsbl8p000dyksv6fmg3zzh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="../php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          php学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="../../06/XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">XPath学习笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../../../../2020/02/13/%E4%BD%BF%E7%94%A8You-Get%E4%B8%8B%E8%BD%BDYoutube%E4%B8%8A%E7%9A%84%E8%A7%86%E9%A2%91/">使用You-Get下载Youtube上的视频</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2020/02/06/2020-02-06/">2020-02-06</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2020/02/04/2020-02-04/">2020-02-04</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2020/01/31/2020-01-311/">2020-01-311</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2020/01/31/2020-01-31/">2020-01-31</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.css">
+  <script src="../../../../fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../../../js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
