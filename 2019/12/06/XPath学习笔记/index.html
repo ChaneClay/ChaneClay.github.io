@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>XPath学习笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="xpath学习笔记 ### XPath语法  123456789101112131415&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&amp;gt;&amp;lt;bookstore&amp;gt;&amp;lt;book&amp;gt;  &amp;lt;title lang=&quot;eng&quot;&amp;gt;Harry Potter&amp;lt;&#x2F;title&amp;gt;  &amp;lt;price&amp;gt;29.99&amp;lt;&#x2F;p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XPath学习笔记">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="xpath学习笔记 ### XPath语法  123456789101112131415&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&amp;gt;&amp;lt;bookstore&amp;gt;&amp;lt;book&amp;gt;  &amp;lt;title lang=&quot;eng&quot;&amp;gt;Harry Potter&amp;lt;&#x2F;title&amp;gt;  &amp;lt;price&amp;gt;29.99&amp;lt;&#x2F;p">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1589458607127.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1589458689294.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1589458745991.png">
+<meta property="og:updated_time" content="2020-07-18T14:39:27.542Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;1589458607127.png">
+  
+    <link rel="alternate" href="../../../../atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="../../../../css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../../../index.html" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="../../../../index.html">Home</a>
+        
+          <a class="main-nav-link" href="../../../../archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../../../atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-XPath学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="" class="article-date">
+  <time datetime="2019-12-06T14:13:59.000Z" itemprop="datePublished">2019-12-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      XPath学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <center><h2>xpath学习笔记</h2></center>
+### XPath语法
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bookstore</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">"eng"</span>&gt;</span>Harry Potter<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">price</span>&gt;</span>29.99<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">"eng"</span>&gt;</span>Learning XML<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">price</span>&gt;</span>39.95<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">bookstore</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/12/06/XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1589458607127.png" alt="1589458607127"></p>
+<p><img src="/2019/12/06/XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1589458689294.png" alt="1589458689294"></p>
+<p><img src="/2019/12/06/XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1589458745991.png" alt="1589458745991"></p>
+<h3 id="XPath实例"><a href="#XPath实例" class="headerlink" title="XPath实例"></a>XPath实例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">text = \</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&lt;ul class="ullist" padding="1" spacing="1"&gt;</span></span><br><span class="line"><span class="string">    &lt;li&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="top"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="position" width="350"&gt;职位名称&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;职位类别&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;人数&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;地点&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;发布时间&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="even"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="l square"&gt;</span></span><br><span class="line"><span class="string">              &lt;a target="_blank" href="position_detail.php?id=33824&amp;amp;keywords=python&amp;amp;tid=87&amp;amp;lid=2218"&gt;python开发工程师&lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;技术类&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;上海&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2018-10-23&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="odd"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="l square"&gt;</span></span><br><span class="line"><span class="string">              &lt;a target="_blank" href="position_detail.php?id=29938&amp;amp;keywords=python&amp;amp;tid=87&amp;amp;lid=2218"&gt;python后端&lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;技术类&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;上海&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2018-10-23&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="even"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="l square"&gt;</span></span><br><span class="line"><span class="string">              &lt;a target="_blank" href="position_detail.php?id=31236&amp;amp;keywords=python&amp;amp;tid=87&amp;amp;lid=2218"&gt;高级Python开发工程师&lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;技术类&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;上海&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2018-10-23&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="odd"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="l square"&gt;</span></span><br><span class="line"><span class="string">              &lt;a target="_blank" href="position_detail.php?id=31235&amp;amp;keywords=python&amp;amp;tid=87&amp;amp;lid=2218"&gt;python架构师&lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;技术类&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;1&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;上海&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2018-10-23&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="even"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="l square"&gt;</span></span><br><span class="line"><span class="string">              &lt;a target="_blank" href="position_detail.php?id=34531&amp;amp;keywords=python&amp;amp;tid=87&amp;amp;lid=2218"&gt;Python数据开发工程师&lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;技术类&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;1&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;上海&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2018-10-23&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="odd"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="l square"&gt;</span></span><br><span class="line"><span class="string">              &lt;a target="_blank" href="position_detail.php?id=34532&amp;amp;keywords=python&amp;amp;tid=87&amp;amp;lid=2218"&gt;高级图像算法研发工程师&lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;技术类&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;1&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;上海&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2018-10-23&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="even"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="l square"&gt;</span></span><br><span class="line"><span class="string">              &lt;a target="_blank" href="position_detail.php?id=31648&amp;amp;keywords=python&amp;amp;tid=87&amp;amp;lid=2218"&gt;高级AI开发工程师&lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;技术类&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;4&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;上海&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2018-10-23&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="odd"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="l square"&gt;</span></span><br><span class="line"><span class="string">              &lt;a target="_blank" href="position_detail.php?id=32218&amp;amp;keywords=python&amp;amp;tid=87&amp;amp;lid=2218"&gt;后台开发工程师&lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;技术类&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;1&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;上海&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2018-10-23&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="even"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="l square"&gt;</span></span><br><span class="line"><span class="string">              &lt;a target="_blank" href="position_detail.php?id=32217&amp;amp;keywords=python&amp;amp;tid=87&amp;amp;lid=2218"&gt;Python开发（自动化运维方向）&lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;技术类&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;1&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;上海&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2018-10-23&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;div id="odd"&gt;</span></span><br><span class="line"><span class="string">            &lt;span class="l square"&gt;</span></span><br><span class="line"><span class="string">              &lt;a target="_blank" href="position_detail.php?id=34511&amp;amp;keywords=python&amp;amp;tid=87&amp;amp;lid=2218"&gt;Python数据挖掘讲师 &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;技术类&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;1&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;上海&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;span&gt;2018-10-23&lt;/span&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/li&gt;</span></span><br><span class="line"><span class="string">&lt;/ul&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>导入lxml包</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">html = etree.HTML(text)     <span class="comment"># 字符串转换成html</span></span><br><span class="line">result = etree.tostring(html, encoding=<span class="string">'utf8'</span>).decode(<span class="string">'utf8'</span>)       <span class="comment"># 转换成字符串打印输出</span></span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>获取所有div的标签, 返回值为列表</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">divs = html.xpath(<span class="string">'//div'</span>)</span><br><span class="line"><span class="keyword">for</span> div <span class="keyword">in</span> divs:</span><br><span class="line">    data = etree.tostring(div, encoding=<span class="string">'utf8'</span>).decode(<span class="string">'utf8'</span>)</span><br><span class="line">    print(data)</span><br><span class="line">    print(<span class="string">'*'</span>*<span class="number">50</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>获取指定div, 返回值为列表</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">divs = html.xpath(<span class="string">'//div[2]'</span>)		<span class="comment"># 第二个div</span></span><br><span class="line">print(type(divs))</span><br><span class="line"><span class="keyword">for</span> div <span class="keyword">in</span> divs:</span><br><span class="line">    data = etree.tostring(div, encoding=<span class="string">'utf8'</span>).decode(<span class="string">'utf8'</span>)</span><br><span class="line">    print(data)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>获取所有id=’even’的div标签</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">divs = html.xpath(<span class="string">'//div[@id="even"]'</span>)</span><br><span class="line"><span class="keyword">for</span> div <span class="keyword">in</span> divs:</span><br><span class="line">    data = etree.tostring(div, encoding=<span class="string">'utf8'</span>).decode(<span class="string">'utf8'</span>)</span><br><span class="line">    print(data)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>获取标签的某个属性值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">divs = html.xpath(<span class="string">'//div/@id'</span>)</span><br><span class="line"><span class="keyword">for</span> div <span class="keyword">in</span> divs:</span><br><span class="line">    print(div)</span><br><span class="line">hrefs = html.xpath(<span class="string">'//div/span/a/@href'</span>)</span><br><span class="line"><span class="keyword">for</span> href <span class="keyword">in</span> hrefs:</span><br><span class="line">    print(href)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>获取div中的所有职位信息</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">work_list = []      <span class="comment">#  存储所有div中信息</span></span><br><span class="line">divs = html.xpath(<span class="string">'//div'</span>)[<span class="number">1</span>:]</span><br><span class="line"><span class="keyword">for</span> div <span class="keyword">in</span> divs:</span><br><span class="line">    work = &#123;&#125;       <span class="comment"># 存储一个div中的信息</span></span><br><span class="line">    position = div.xpath(<span class="string">'./span[1]/a/text()'</span>)[<span class="number">0</span>]</span><br><span class="line">    href = div.xpath(<span class="string">'./span[1]/a/@href'</span>)[<span class="number">0</span>]</span><br><span class="line">    type = div.xpath(<span class="string">'./span[2]/text()'</span>)[<span class="number">0</span>]</span><br><span class="line">    num = div.xpath(<span class="string">'./span[3]/text()'</span>)[<span class="number">0</span>]</span><br><span class="line">    addr = div.xpath(<span class="string">'./span[4]/text()'</span>)[<span class="number">0</span>]</span><br><span class="line">    date = div.xpath(<span class="string">'./span[5]/text()'</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    work = &#123;</span><br><span class="line">        <span class="string">'position'</span>: position,</span><br><span class="line">        <span class="string">'href'</span>: href,</span><br><span class="line">        <span class="string">'type'</span>: type,</span><br><span class="line">        <span class="string">'num'</span>: num,</span><br><span class="line">        <span class="string">'addr'</span>: addr,</span><br><span class="line">        <span class="string">'date'</span>: date,</span><br><span class="line">    &#125;</span><br><span class="line">    work_list.append(work)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>搭配XPath Helper插件效果更佳</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/06/XPath%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ckcrreo2o000b8wsv2r26g0jw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="../../08/11/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          11
+        
+      </div>
+    </a>
+  
+  
+    <a href="../MarkDown%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MarkDown语法基础</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../../../../2020/02/13/%E4%BD%BF%E7%94%A8You-Get%E4%B8%8B%E8%BD%BDYoutube%E4%B8%8A%E7%9A%84%E8%A7%86%E9%A2%91/">使用You-Get下载Youtube上的视频</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2020/02/06/2020-02-06/">2020-02-06</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2020/02/04/2020-02-04/">2020-02-04</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2020/01/31/2020-01-311/">2020-01-311</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2020/01/31/2020-01-31/">2020-01-31</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.css">
+  <script src="../../../../fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../../../js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
